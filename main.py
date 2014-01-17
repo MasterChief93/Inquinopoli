@@ -77,8 +77,8 @@ class Grafo:
 	        print Explored
 
 	def visitDFS(self,root):
-	        state = dict() # -1 unexplore , 0 added to the froniter, 1 explored
-	       state[root.value] = 1
+	     state = dict() # -1 unexplore , 0 added to the froniter, 1 explored
+	     state[root.value] = 1
 
 	        Explored = []
 	        s = []
