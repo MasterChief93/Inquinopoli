@@ -1,5 +1,4 @@
-__author__ = 'Federico'
-__author__ = 'Federico'
+#Questo è il titolo: ma dov'è? Io non lo vedo...
 
 class City:
     def __init__(self,value,peso):
