@@ -11,7 +11,7 @@ class Grafo:
 
     def __init__(self):
 	        self.cities = None
-	        self.streets = None
+	        self.streets = None  #ciao sono una modifica
 
 
     def insertCity(self,value,peso):
