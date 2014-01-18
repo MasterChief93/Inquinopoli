@@ -3,24 +3,29 @@ from random import randrange
 
 def generator():
     file = open('input.txt','w')
-    numbnod = randrange(1,20)
+    numbtest = randrange(1,20)
     stringonona = ''
-    for y in range(numbnod):
+    for y in range(numbtest):
         nodes = randrange(1,200)
         stringpm20 = ''
         for x in range(nodes):
             pm20 = randrange(1,20)
-            stringpm20 += ' ' + str(pm20)
-        nombstr = randrange(numbnod,numbnod**2)
+            if x != nodes - 1:
+                stringpm20 += str(pm20) + ' '
+            else:
+                stringpm20 += str(pm20) + '\n'
+        numbstr = randrange(nodes,nodes**2)
         lista = []
-        par = randrange(nodes)
-        arr = randrange(nodes)
-        while len(lista) < nombstr:
-            elem = [randrange(1,nodes),randrange(1,nodes)]
-            if elem not in lista:
-                lista.append(elem)
+        lista.append([1,randrange(1,nodes)])
+        while len(lista) < numbstr:
+            x = randrange(2,nodes)
+            y = randrange(2,nodes)
+            if x != y:
+                elem = [x,y]
+                if elem not in lista:
+                    lista.append(elem)
 
-        stringona = str(nodes) + '\n' + stringpm20 + '\n' + str(nombstr) + '\n'
+        stringona = str(nodes) + '\n' + stringpm20 + str(numbstr) + '\n'
         stringa = ''
         for elem in lista:
             stringa += str(elem[0]) + ' ' + str(elem[1]) + '\n'
