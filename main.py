@@ -1,4 +1,8 @@
 # coding=utf-8
+import networkx as nx
+#import matplotlib.pyplot as plt
+from time import time           #from graph_tool.all import *
+
 class City:
     def __init__(self,value,peso):
         self.value = value                  #Inizializzazione della classe città:
@@ -93,11 +97,18 @@ class Grafo:
 
 def main(file):
     result = lettura(file)
-    G = Grafo()         #E' il secondo esempio del file input nel progetto
+    G = Grafo()
+    #Gr = nx.DiGraph()
+          #E' il secondo esempio del file input nel progetto
     for i in range(len(result[1])):
         G.insertCity(i+1,result[1][i])
+        #Gr.add_node(i+1)
+
     for elem in result[2]:
         G.insertStreet(int(elem[0]),int(elem[1]))
+        #Gr.add_edge(int(elem[0]),int(elem[1]),None)
+    #nx.draw(Gr)
+    #plt.savefig("path.png")
     G.visitDFS(1)
     G.visitBFS(1)
     G.visit(1)
@@ -113,5 +124,8 @@ def lettura(file):
     total = [numbnodes,pm20list,archi]
     return total
 
+start = time()
 file = open('input.txt','r')
 main(file)
+end = time()
+print end-start

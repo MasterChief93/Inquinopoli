@@ -1,5 +1,6 @@
 __author__ = 'Federico'
 from random import randrange
+from time import time
 
 def generator():
     file = open('input.txt','w')
@@ -34,5 +35,7 @@ def generator():
     file.write(stringonona)
     file.close()
 
-
+start = time()
 generator()
+end = time()
+print end-start
