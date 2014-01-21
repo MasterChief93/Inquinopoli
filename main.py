@@ -1,6 +1,7 @@
 # coding=utf-8
 import networkx as nx
 import matplotlib.pyplot as plt
+from PriorityDijkstra import dijkstra
 from time import time           #from graph_tool.all import *
 
 class City:
@@ -8,6 +9,11 @@ class City:
         self.value = value                  #Inizializzazione della classe città:
         self.peso = peso                    #ognuna contiene valore (numero della città)
         #self.frow = []                      #peso (PM20) e lista delle città dalle quali si può giungere a questa (probabilmente da rimuove!!)
+class Street:
+    def __init__(self,par,arr,peso):
+        self.par = par
+        self.arr = arr
+        self.peso = peso
 
 class Grafo:
     def __init__(self):
@@ -24,16 +30,17 @@ class Grafo:
 
     def insertStreet(self,par,arr):
         #if (par.value in self.cities) and (arr.value in self.cities):
-        if par in self.cities and arr in self.cities:                   #Innanzitutto devo esistere entrambe le città per poter essere creata la strada
+        if par in self.cities and arr in self.cities:
+            peso = (int(self.cities[arr].peso) - int(self.cities[par].peso))**3                                                    #Innanzitutto devo esistere entrambe le città per poter essere creata la strada
             if self.streets == None:                                    #Se non ci sono strade allora inizializzo la lista di liste delle strade
                 #self.streets = [[par,arr]]
-                self.streets = {par : [arr]}        #par.value e arr.value
+                self.streets = {par : [Street(par,arr,peso)]}        #par.value e arr.value
             else:                                                       #altrimenti appendo semplicemente la nuova strada
                 if par in self.streets:
                 #self.streets.append([par,arr])
-                    self.streets[par].append(arr)
+                    self.streets[par].append(Street(par,arr,peso))
                 else:
-                    self.streets[par] = [arr]#idem
+                    self.streets[par] = [Street(par,arr,peso)]#idem
             #arr.frow.append(par)
             #self.cities[arr].frow.append(par)
 
@@ -114,6 +121,8 @@ def main(file):
         #Gr.add_edge(int(elem[0]),int(elem[1]),None)
     print G.cities
     print G.streets
+    #print G.streets[1]
+    print dijkstra(G,1,7)
     #nx.draw(Gr)
     #plt.savefig("path.png")
     #G.visitDFS(1)
@@ -129,10 +138,11 @@ def lettura(file):
     for i in range(3,len(x)):
         archi.append(x[i].split(' '))
     total = [numbnodes,pm20list,archi]
+    #print total
     return total
 
 start = time()
-file = open('input.txt','r')
+file = open('input2.txt','r')
 main(file)
 end = time()
 print end-start
