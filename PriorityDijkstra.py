@@ -5,7 +5,7 @@ class Street:
         self.peso = peso
 
 
-class Elem:
+class Node:
     def __init__(self,value):
         self.value = value
         self.fath = None
@@ -13,17 +13,17 @@ class Elem:
 
 class Tree:
     def __init__(self):
-        self.elem = None
+        self.elems = None
 
     def addElem(self,padre,figlio):
-        padre = Elem(padre)
-        figlio = Elem(figlio)
-        if self.elem == None:
-            self.elem = [figlio]
+        padre = Node(padre)
+        figlio = Node(figlio)
+        if self.elems == None:
+            self.elems = [figlio]
         else:
             padre.son = figlio
             figlio.fath = padre
-            self.elem.append(figlio)
+            self.elems.append(figlio)
 
 
 
@@ -33,23 +33,23 @@ def dijkstra(G,rad,arr):
     graph = G
     state = dict()
     state[rad] = 0
-    rad = Elem(rad)
-    arr = Elem(arr)
+    rad = Node(rad)
+    arr = Node(arr)
     tree = Tree()
     tree.addElem(rad,rad)
-    while arr not in tree.elem:
+    print tree.elems[0].value
+    while arr not in tree.elems:
         eligible = []
-        for elem in tree.elem:
-            print tree.elem
+        for elem in tree.elems:
             for archi in graph.streets[elem.value]:
                 if archi not in eligible:
                     eligible.append(archi)
         cheapest = minus(eligible)
-        #print "Eligible is: " + str(eligible)
         tree.addElem(cheapest.par,cheapest.arr)
-        eligible.pop(eligible.index(cheapest))
+        print cheapest.par, cheapest.arr
+        #eligible.pop(eligible.index(cheapest))
         graph.streets[cheapest.par].remove(cheapest)
-    return tree.elem
+    return tree.elems
 
 
 def minus(elements):
