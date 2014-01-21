@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="418f56e1-391c-4895-a7b9-f5acd410d691" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PriorityDijkstra.py" afterPath="$PROJECT_DIR$/PriorityDijkstra.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Inquinopoli.iws" />
@@ -29,7 +28,7 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="33" selection-start="5933" selection-end="5933" vertical-scroll-proportion="4.4410877" vertical-offset="485" max-vertical-offset="2601">
+            <state line="40" column="47" selection-start="2321" selection-end="2321" vertical-scroll-proportion="-4.444109" vertical-offset="2151" max-vertical-offset="2601">
               <folding />
             </state>
           </provider>
@@ -443,7 +442,11 @@
       <created>1390299858733</created>
       <updated>1390299858733</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="-Dijkstra acerbo">
+      <created>1390300856954</created>
+      <updated>1390300856954</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -468,7 +471,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -614,7 +617,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="33" selection-start="5933" selection-end="5933" vertical-scroll-proportion="4.4410877" vertical-offset="485" max-vertical-offset="2601">
+        <state line="40" column="47" selection-start="2321" selection-end="2321" vertical-scroll-proportion="-4.444109" vertical-offset="2151" max-vertical-offset="2601">
           <folding />
         </state>
       </provider>
