@@ -40,14 +40,16 @@ def dijkstra(G,rad,arr):
     while arr not in tree.elem:
         eligible = []
         for elem in tree.elem:
-            if graph.streets[elem.value] != []:
+            if graph.streets[elem.value.value] != []:
                 for archi in graph.streets[elem.value.value]:
-                    if archi not in eligible:
+                    if archi not in eligible and Elem(archi.arr) not in tree.elem:
                         eligible.append(archi)
         cheapest = minus(eligible)
         #print "Eligible is: " + str(eligible)
+        print cheapest.par, cheapest.arr
         tree.addElem(cheapest.par,cheapest.arr)
-        eligible.remove(cheapest)
+        print tree.elem
+        #eligible.remove(cheapest)
         graph.streets[cheapest.par].remove(cheapest)
     return tree.elem
 
