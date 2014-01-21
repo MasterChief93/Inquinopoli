@@ -1,13 +1,13 @@
 # coding=utf-8
 import networkx as nx
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 from time import time           #from graph_tool.all import *
 
 class City:
     def __init__(self,value,peso):
         self.value = value                  #Inizializzazione della classe città:
         self.peso = peso                    #ognuna contiene valore (numero della città)
-        self.frow = []                      #peso (PM20) e lista delle città dalle quali si può giungere a questa (probabilmente da rimuove!!)
+        #self.frow = []                      #peso (PM20) e lista delle città dalle quali si può giungere a questa (probabilmente da rimuove!!)
 
 class Grafo:
     def __init__(self):
@@ -15,7 +15,7 @@ class Grafo:
         self.streets = None
 
     def insertCity(self,value,peso):
-        newCity = City(value,peso)       #Creazione di un elemento di classe città
+        newCity = City(value,peso)          #Creazione di un elemento di classe città
         if self.cities == None:             #Se non sono state MAI aggiunte città allora inizializzo il dizionario con la nuova città
             self.cities = {value: newCity}
         else:
@@ -26,11 +26,16 @@ class Grafo:
         #if (par.value in self.cities) and (arr.value in self.cities):
         if par in self.cities and arr in self.cities:                   #Innanzitutto devo esistere entrambe le città per poter essere creata la strada
             if self.streets == None:                                    #Se non ci sono strade allora inizializzo la lista di liste delle strade
-                self.streets = [[par,arr]] #par.value e arr.value
+                #self.streets = [[par,arr]]
+                self.streets = {par : [arr]}        #par.value e arr.value
             else:                                                       #altrimenti appendo semplicemente la nuova strada
-                self.streets.append([par,arr])  #idem
+                if par in self.streets:
+                #self.streets.append([par,arr])
+                    self.streets[par].append(arr)
+                else:
+                    self.streets[par] = [arr]#idem
             #arr.frow.append(par)
-            self.cities[arr].frow.append(par)
+            #self.cities[arr].frow.append(par)
 
     def deleteStreet(self,par,arr):
         if [par.value,arr.value] in self.streets:           #La strada innanzitutto deve essere nella lista delle strade
@@ -50,7 +55,7 @@ class Grafo:
             state[now] == 1                 #dico che l'ho visitato
             Explored.append(now)            #e lo metto tra gli esplorati
             for elem in self.streets:
-                if elem[0] == now:          #per tutte le strade che partono dall'elemento poppato
+                if elem == now:          #per tutte le strade che partono dall'elemento poppato
                     new = elem[1]           #prendo la città di arrivo
                     if not new in state or state[now] == 1:    #se non è già stata visitata
                         state[new] = 0                         #la imposto come vista
@@ -107,11 +112,13 @@ def main(file):
     for elem in result[2]:
         G.insertStreet(int(elem[0]),int(elem[1]))
         #Gr.add_edge(int(elem[0]),int(elem[1]),None)
+    print G.cities
+    print G.streets
     #nx.draw(Gr)
     #plt.savefig("path.png")
-    G.visitDFS(1)
-    G.visitBFS(1)
-    G.visit(1)
+    #G.visitDFS(1)
+    #G.visitBFS(1)
+    #G.visit(1)
 
 
 def lettura(file):
