@@ -29,20 +29,15 @@ class Grafo:
         return newCity                      #------> Vantaggio dei dizionari = Se l'elemento di nome/posizione value non esiste allora lo crea da solo
 
     def insertStreet(self,par,arr):
-        #if (par.value in self.cities) and (arr.value in self.cities):
         if par in self.cities and arr in self.cities:
             peso = (int(self.cities[arr].peso) - int(self.cities[par].peso))**3                                                    #Innanzitutto devo esistere entrambe le città per poter essere creata la strada
             if self.streets == None:                                    #Se non ci sono strade allora inizializzo la lista di liste delle strade
-                #self.streets = [[par,arr]]
-                self.streets = {par : [Street(par,arr,peso)]}        #par.value e arr.value
+                self.streets = {par: [Street(par,arr,peso)]}            #par.value e arr.value
             else:                                                       #altrimenti appendo semplicemente la nuova strada
                 if par in self.streets:
-                #self.streets.append([par,arr])
                     self.streets[par].append(Street(par,arr,peso))
                 else:
-                    self.streets[par] = [Street(par,arr,peso)]#idem
-            #arr.frow.append(par)
-            #self.cities[arr].frow.append(par)
+                    self.streets[par] = [Street(par,arr,peso)]          #idem
 
     def deleteStreet(self,par,arr):
         if [par.value,arr.value] in self.streets:           #La strada innanzitutto deve essere nella lista delle strade
@@ -121,14 +116,9 @@ def main(file):
         #Gr.add_edge(int(elem[0]),int(elem[1]),None)
     print G.cities
     print G.streets
-    #print G.streets[1]
     print dijkstra(G,1,7)
     #nx.draw(Gr)
     #plt.savefig("path.png")
-    #G.visitDFS(1)
-    #G.visitBFS(1)
-    #G.visit(1)
-
 
 def lettura(file):
     x = file.readlines()
@@ -138,11 +128,10 @@ def lettura(file):
     for i in range(3,len(x)):
         archi.append(x[i].split(' '))
     total = [numbnodes,pm20list,archi]
-    #print total
     return total
 
 start = time()
-file = open('input2.txt','r')
+file = open('input.txt','r')
 main(file)
 end = time()
 print end-start
