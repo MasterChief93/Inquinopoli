@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="418f56e1-391c-4895-a7b9-f5acd410d691" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PriorityDijkstra.py" afterPath="$PROJECT_DIR$/PriorityDijkstra.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Inquinopoli.iws" />
@@ -27,19 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="123" column="5" selection-start="6140" selection-end="6140" vertical-scroll-proportion="0.0" vertical-offset="2125" max-vertical-offset="2601">
+            <state line="115" column="33" selection-start="5933" selection-end="5933" vertical-scroll-proportion="4.4410877" vertical-offset="485" max-vertical-offset="2601">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PriorityDijkstra.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PriorityDijkstra.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PriorityDijkstra.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="27" selection-start="854" selection-end="854" vertical-scroll-proportion="0.33139536" vertical-offset="600" max-vertical-offset="1258">
+            <state line="40" column="0" selection-start="774" selection-end="774" vertical-scroll-proportion="0.0" vertical-offset="520" max-vertical-offset="1258">
               <folding />
             </state>
           </provider>
@@ -440,7 +439,11 @@
       <created>1390293763640</created>
       <updated>1390293763640</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="-Dijkstra acerbo">
+      <created>1390299858733</created>
+      <updated>1390299858733</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -465,7 +468,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -477,7 +480,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29541597" sideWeight="0.5003723" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37011886" sideWeight="0.4996277" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37011886" sideWeight="0.4996277" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34465197" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -503,10 +506,13 @@
     <MESSAGE value=" - Generatore corretto&#10; - Aggiunta la funzione &quot;lettura&quot; per prendere i dati dal file input.txt&#10; - Conseguente creazione del grafo" />
     <MESSAGE value="- Aggiunta la libreria time&#10;- Tentativo di visualizzare il grafo" />
     <MESSAGE value="- self.streets ora è un dizionario" />
-    <option name="LAST_COMMIT_MESSAGE" value="- self.streets ora è un dizionario" />
+    <MESSAGE value="-Dijkstra acerbo" />
+    <option name="LAST_COMMIT_MESSAGE" value="-Dijkstra acerbo" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="6" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.py">
@@ -599,16 +605,16 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/PriorityDijkstra.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="5" selection-start="6140" selection-end="6140" vertical-scroll-proportion="0.0" vertical-offset="2125" max-vertical-offset="2601">
+        <state line="40" column="0" selection-start="774" selection-end="774" vertical-scroll-proportion="0.0" vertical-offset="520" max-vertical-offset="1258">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PriorityDijkstra.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="27" selection-start="854" selection-end="854" vertical-scroll-proportion="0.33139536" vertical-offset="600" max-vertical-offset="1258">
+        <state line="115" column="33" selection-start="5933" selection-end="5933" vertical-scroll-proportion="4.4410877" vertical-offset="485" max-vertical-offset="2601">
           <folding />
         </state>
       </provider>
