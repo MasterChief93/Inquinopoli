@@ -131,7 +131,7 @@ def lettura(file):
     return total
 
 start = time()
-file = open('input.txt','r')
+file = open('input2.txt','r')
 main(file)
 end = time()
 print end-start
