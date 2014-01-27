@@ -105,18 +105,18 @@ class Grafo:
 def main(file):
     result = lettura(file)
     G = Grafo()
-    #Gr = nx.DiGraph()
+    Gr = nx.DiGraph()
           #E' il secondo esempio del file input nel progetto
     for i in range(len(result[1])):
         G.insertCity(i+1,result[1][i])
-        #Gr.add_node(i+1)
+        Gr.add_node(i+1)
 
     for elem in result[2]:
         G.insertStreet(int(elem[0]),int(elem[1]))
-        #Gr.add_edge(int(elem[0]),int(elem[1]),None)
-    print G.cities
-    print G.streets[1]
-    print dijkstra2(G,1)
+        Gr.add_edge(int(elem[0]),int(elem[1]))
+    print G.streets
+    print G.streets[6]
+    dijkstra2(G,1,4)
     #nx.draw(Gr)
     #plt.savefig("path.png")
 
@@ -131,7 +131,7 @@ def lettura(file):
     return total
 
 start = time()
-file = open('input2.txt','r')
+file = open('input.txt','r')
 main(file)
 end = time()
 print end-start

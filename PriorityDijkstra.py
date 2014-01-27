@@ -1,6 +1,7 @@
 # coding=utf-8
-from PQbinaryHeap import PQbinaryHeap
-from linked_ds.trees import treeArrayList
+from PQbinaryHeap import PQbinaryHeap, BinaryHeapNode
+from linked_ds.trees.treeArrayList import TreeArrayList, TreeArrayListNode
+
 class Street:
     def __init__(self, par, arr, peso):
         self.par = par
@@ -69,27 +70,35 @@ def check(g):
     else:
         return False
 
-def dijkstra2(g,root):
+def dijkstra2(g,root,end):
     costo = dict()                                              #Inizializzo un dizionario per mantenere i costi degli archi
     for elem in g.cities:
         costo[elem] = float("+inf")
-    T = treeArrayList              #Inizializzazione alberello
+    T = [root]             #Inizializzazione alberello
     S = PQbinaryHeap()                 #e coda con priorità
     costo[root] = 0
     S.insert(root,0)
-    while (not S.isEmpty()):
-        u = S.deleteMin()
-        for street in g.streets[u]:
-            if costo[street.arr] == float("+inf"):
+    while not S.isEmpty():
+        u = S.findMin()
+        S.deleteMin()
+        if u in g.streets:
+            for street in g.streets[u]:
+                if costo[street.arr] == float("+inf"):
+                    S.insert(street.arr,costo[u] + street.peso)
+                    costo[street.arr] = costo[u] + street.peso
+                    T.append(street.arr)
+                elif costo[u] + street.peso < costo[street.arr]:
+                    v = BinaryHeapNode(street.arr,costo[street.arr],S.length)
+                    S.decreaseKey(v,costo[street.arr] - (costo[u] + street.peso))
+                    costo[street.arr] = costo[u] + street.peso
+                    T.append(street.arr)
+            if street.arr in T:
                 S.insert(street.arr,costo[u] + street.peso)
-                costo[street.arr] = costo[u] + street.peso
-                T.insert(u,street.arr)
-            elif costo[u] + street.peso < costo[street.arr]:
-                S.decreaseKey(street.arr,costo[street.arr] - (costo[u] + street.peso))
-                costo[street.arr] = costo[u] + street.peso
-                T.insert(u,street.arr)
-    return T
-
+    if costo[end] < 3:
+        print 0
+    else:
+        print costo[end]
+    print T
 
 
 

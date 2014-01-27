@@ -66,8 +66,9 @@ class PQbinaryHeap:
         #del self.heap[self.length]
         
     def decreaseKey(self, node, nKey):
-        node.key = nKey
-        self.moveUp(node)
+        if node in self.heap:
+            node.key = nKey
+            self.moveUp(node)
     
     def stampa(self):
         s = ""
