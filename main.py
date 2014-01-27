@@ -1,7 +1,7 @@
 # coding=utf-8
 import networkx as nx
 import matplotlib.pyplot as plt
-from PriorityDijkstra import dijkstra2
+from PriorityDijkstra import dijkstra2,dijkstra
 from time import time           #from graph_tool.all import *
 
 class City:
@@ -115,10 +115,10 @@ def main(file):
         G.insertStreet(int(elem[0]),int(elem[1]))
         Gr.add_edge(int(elem[0]),int(elem[1]))
     print G.streets
-    print G.streets[6]
-    dijkstra2(G,1,4)
-    #nx.draw(Gr)
-    #plt.savefig("path.png")
+    #print G.streets[6]
+    dijkstra2(G,1,3)
+    nx.draw(Gr)
+    plt.savefig("path.png")
 
 def lettura(file):
     x = file.readlines()

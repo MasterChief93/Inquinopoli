@@ -92,7 +92,7 @@ def dijkstra2(g,root,end):
                     S.decreaseKey(v,costo[street.arr] - (costo[u] + street.peso))
                     costo[street.arr] = costo[u] + street.peso
                     T.append(street.arr)
-            if street.arr in T:
+            if street.arr in T and costo[street.arr] < 0 :
                 S.insert(street.arr,costo[u] + street.peso)
     if costo[end] < 3:
         print 0
