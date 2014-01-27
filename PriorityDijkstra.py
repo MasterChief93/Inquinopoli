@@ -1,3 +1,6 @@
+# coding=utf-8
+from PQbinaryHeap import PQbinaryHeap
+from linked_ds.trees import treeArrayList
 class Street:
     def __init__(self, par, arr, peso):
         self.par = par
@@ -65,6 +68,27 @@ def check(g):
         return True                             #allora torno True
     else:
         return False
+
+def dijkstra2(g,root):
+    costo = dict()                                              #Inizializzo un dizionario per mantenere i costi degli archi
+    for elem in g.cities:
+        costo[elem] = float("+inf")
+    T = treeArrayList              #Inizializzazione alberello
+    S = PQbinaryHeap()                 #e coda con priorità
+    costo[root] = 0
+    S.insert(root,0)
+    while (not S.isEmpty()):
+        u = S.deleteMin()
+        for street in g.streets[u]:
+            if costo[street.arr] == float("+inf"):
+                S.insert(street.arr,costo[u] + street.peso)
+                costo[street.arr] = costo[u] + street.peso
+                T.insert(u,street.arr)
+            elif costo[u] + street.peso < costo[street.arr]:
+                S.decreaseKey(street.arr,costo[street.arr] - (costo[u] + street.peso))
+                costo[street.arr] = costo[u] + street.peso
+                T.insert(u,street.arr)
+    return T
 
 
 
