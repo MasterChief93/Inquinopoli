@@ -116,7 +116,7 @@ def main(file):
         Gr.add_edge(int(elem[0]),int(elem[1]))
     print G.streets
     #print G.streets[6]
-    dijkstra2(G,1,3)
+    dijkstra2(G,1,22)
     nx.draw(Gr)
     plt.savefig("path.png")
 
