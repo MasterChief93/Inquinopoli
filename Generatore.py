@@ -5,7 +5,6 @@ from time import time
 
 def generator():
     file = open('input.txt','w')
-    numbtest = randrange(1,20)
     stringonona = ''
     nodes = randrange(1,200)                #numero città
     stringpm10 = ''                         #stringa

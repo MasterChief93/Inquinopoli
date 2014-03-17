@@ -1,13 +1,14 @@
-# coding=utf-8
+# -*- coding: utf-8 -*-
 import networkx as nx
 import matplotlib.pyplot as plt
 from PriorityDijkstra import dijkstra2,dijkstra
+from BellmanFord import bellmanford
 from time import time           #from graph_tool.all import *
 
 class City:
     def __init__(self,value,peso):
-        self.value = value                  #Inizializzazione della classe città:
-        self.peso = peso                    #ognuna contiene valore (numero della città)
+        self.value = value                   #Inizializzazione della classe città:
+        self.peso = peso                     #ognuna contiene valore (numero della città)
         #self.frow = []                      #peso (PM20) e lista delle città dalle quali si può giungere a questa (probabilmente da rimuove!!)
 class Street:
     def __init__(self,par,arr,peso):
@@ -48,25 +49,25 @@ class Grafo:
 
     def visit(self,root):#visita generica
         state = dict()                      #inizializzo un dizionario per tener conto delle città visitate
-        state[root] = 1               #la radice viene visitata
+        state[root] = 1                     #la radice viene visitata
         Explored = []                       #Mantengo la lista degli elementi visitati
         s = set()                           #Il set è una semplice lista alla fine...
-        s.add(root)                   #Aggiungo la radice al set
+        s.add(root)                         #Aggiungo la radice al set
         while len(s) > 0:                   #finché non lo svuoto
             now = s.pop()                   #poppo il primo elemento
             state[now] == 1                 #dico che l'ho visitato
             Explored.append(now)            #e lo metto tra gli esplorati
             for elem in self.streets:
-                if elem == now:          #per tutte le strade che partono dall'elemento poppato
-                    new = elem[1]           #prendo la città di arrivo
+                if elem == now:                                #per tutte le strade che partono dall'elemento poppato
+                    new = elem[1]                              #prendo la città di arrivo
                     if not new in state or state[now] == 1:    #se non è già stata visitata
                         state[new] = 0                         #la imposto come vista
                         s.add(new)                             #e la aggiungo al set
         print Explored
 
     def visitDFS(self,root):
-        state = dict()                  #stesso funzionamento della visita generica
-        state[root] = 1           #ma al posto del set uso una lista e invece dell'add uso un insert alla posizione 0
+        state = dict()                      #stesso funzionamento della visita generica
+        state[root] = 1                     #ma al posto del set uso una lista e invece dell'add uso un insert alla posizione 0
         Explored = []
         s = []
         s.insert(0,root)
@@ -116,7 +117,8 @@ def main(file):
         Gr.add_edge(int(elem[0]),int(elem[1]))
     print G.streets
     #print G.streets[6]
-    dijkstra2(G,1,22)
+    dijkstra2(G,1,7)
+    bellmanford(G,7)
     nx.draw(Gr)
     plt.savefig("path.png")
 
@@ -131,7 +133,7 @@ def lettura(file):
     return total
 
 start = time()
-file = open('input.txt','r')
+file = open('input2.txt','r')
 main(file)
 end = time()
 print end-start

@@ -74,8 +74,8 @@ def dijkstra2(g,root,end):
     costo = dict()                                              #Inizializzo un dizionario per mantenere i costi degli archi
     for elem in g.cities:
         costo[elem] = float("+inf")
-    T = [root]             #Inizializzazione alberello
-    S = PQbinaryHeap()                 #e coda con priorità
+    T = [root]                          #Inizializzazione alberello
+    S = PQbinaryHeap()                  #e coda con priorità
     costo[root] = 0
     S.insert(root,0)
     while not S.isEmpty():
@@ -92,7 +92,7 @@ def dijkstra2(g,root,end):
                     S.decreaseKey(v,costo[street.arr] - (costo[u] + street.peso))
                     costo[street.arr] = costo[u] + street.peso
                     T.append(street.arr)
-            if street.arr in T and costo[street.arr] < 0 and T.count(street.arr) > len(g.streets[street.arr]):
+            if street.arr in T and costo[street.arr] < 0: #and T.count(street.arr) > len(g.streets[street.arr]):
                 S.insert(street.arr,costo[u] + street.peso)
     if costo[end] < 3:
         print 0
