@@ -1,13 +1,14 @@
-# coding=utf-8
-#import networkx as nx
-#import matplotlib.pyplot as plt
-from PriorityDijkstra import dijkstra
+# -*- coding: utf-8 -*-
+import networkx as nx
+import matplotlib.pyplot as plt
+from PriorityDijkstra import dijkstra2,dijkstra
+from BellmanFord import bellmanford
 from time import time           #from graph_tool.all import *
 
 class City:
     def __init__(self,value,peso):
-        self.value = value                  #Inizializzazione della classe città:
-        self.peso = peso                    #ognuna contiene valore (numero della città)
+        self.value = value                   #Inizializzazione della classe città:
+        self.peso = peso                     #ognuna contiene valore (numero della città)
         #self.frow = []                      #peso (PM20) e lista delle città dalle quali si può giungere a questa (probabilmente da rimuove!!)
 class Street:
     def __init__(self,par,arr,peso):
@@ -29,20 +30,15 @@ class Grafo:
         return newCity                      #------> Vantaggio dei dizionari = Se l'elemento di nome/posizione value non esiste allora lo crea da solo
 
     def insertStreet(self,par,arr):
-        #if (par.value in self.cities) and (arr.value in self.cities):
         if par in self.cities and arr in self.cities:
             peso = (int(self.cities[arr].peso) - int(self.cities[par].peso))**3                                                    #Innanzitutto devo esistere entrambe le città per poter essere creata la strada
             if self.streets == None:                                    #Se non ci sono strade allora inizializzo la lista di liste delle strade
-                #self.streets = [[par,arr]]
-                self.streets = {par : [Street(par,arr,peso)]}        #par.value e arr.value
+                self.streets = {par: [Street(par,arr,peso)]}            #par.value e arr.value
             else:                                                       #altrimenti appendo semplicemente la nuova strada
                 if par in self.streets:
-                #self.streets.append([par,arr])
                     self.streets[par].append(Street(par,arr,peso))
                 else:
-                    self.streets[par] = [Street(par,arr,peso)]#idem
-            #arr.frow.append(par)
-            #self.cities[arr].frow.append(par)
+                    self.streets[par] = [Street(par,arr,peso)]          #idem
 
     def deleteStreet(self,par,arr):
         if [par.value,arr.value] in self.streets:           #La strada innanzitutto deve essere nella lista delle strade
@@ -53,25 +49,25 @@ class Grafo:
 
     def visit(self,root):#visita generica
         state = dict()                      #inizializzo un dizionario per tener conto delle città visitate
-        state[root] = 1               #la radice viene visitata
+        state[root] = 1                     #la radice viene visitata
         Explored = []                       #Mantengo la lista degli elementi visitati
         s = set()                           #Il set è una semplice lista alla fine...
-        s.add(root)                   #Aggiungo la radice al set
+        s.add(root)                         #Aggiungo la radice al set
         while len(s) > 0:                   #finché non lo svuoto
             now = s.pop()                   #poppo il primo elemento
             state[now] == 1                 #dico che l'ho visitato
             Explored.append(now)            #e lo metto tra gli esplorati
             for elem in self.streets:
-                if elem == now:          #per tutte le strade che partono dall'elemento poppato
-                    new = elem[1]           #prendo la città di arrivo
+                if elem == now:                                #per tutte le strade che partono dall'elemento poppato
+                    new = elem[1]                              #prendo la città di arrivo
                     if not new in state or state[now] == 1:    #se non è già stata visitata
                         state[new] = 0                         #la imposto come vista
                         s.add(new)                             #e la aggiungo al set
         print Explored
 
     def visitDFS(self,root):
-        state = dict()                  #stesso funzionamento della visita generica
-        state[root] = 1           #ma al posto del set uso una lista e invece dell'add uso un insert alla posizione 0
+        state = dict()                      #stesso funzionamento della visita generica
+        state[root] = 1                     #ma al posto del set uso una lista e invece dell'add uso un insert alla posizione 0
         Explored = []
         s = []
         s.insert(0,root)
@@ -110,25 +106,21 @@ class Grafo:
 def main(file):
     result = lettura(file)
     G = Grafo()
-    #Gr = nx.DiGraph()
+    Gr = nx.DiGraph()
           #E' il secondo esempio del file input nel progetto
     for i in range(len(result[1])):
         G.insertCity(i+1,result[1][i])
-        #Gr.add_node(i+1)
+        Gr.add_node(i+1)
 
     for elem in result[2]:
         G.insertStreet(int(elem[0]),int(elem[1]))
-        #Gr.add_edge(int(elem[0]),int(elem[1]),None)
-    print G.cities
+        Gr.add_edge(int(elem[0]),int(elem[1]))
     print G.streets
-    #print G.streets[1]
-    print dijkstra(G,1,7)
-    #nx.draw(Gr)
-    #plt.savefig("path.png")
-    #G.visitDFS(1)
-    #G.visitBFS(1)
-    #G.visit(1)
-
+    #print G.streets[6]
+    dijkstra2(G,1,7)
+    bellmanford(G,7)
+    nx.draw(Gr)
+    plt.savefig("path.png")
 
 def lettura(file):
     x = file.readlines()
@@ -138,7 +130,6 @@ def lettura(file):
     for i in range(3,len(x)):
         archi.append(x[i].split(' '))
     total = [numbnodes,pm20list,archi]
-    #print total
     return total
 
 start = time()

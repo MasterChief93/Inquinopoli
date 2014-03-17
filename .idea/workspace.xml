@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="418f56e1-391c-4895-a7b9-f5acd410d691" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Inquinopoli.iml" afterPath="$PROJECT_DIR$/.idea/Inquinopoli.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BellmanFord.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/path.png" afterPath="$PROJECT_DIR$/path.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generatore.py" afterPath="$PROJECT_DIR$/Generatore.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PriorityDijkstra.py" afterPath="$PROJECT_DIR$/PriorityDijkstra.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input.txt" afterPath="$PROJECT_DIR$/input.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Inquinopoli.iws" />
@@ -32,18 +34,36 @@
       <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="144" column="19" selection-start="6576" selection-end="6576" vertical-scroll-proportion="0.0" vertical-offset="2267" max-vertical-offset="2601">
+            <state line="16" column="24" selection-start="710" selection-end="710" vertical-scroll-proportion="0.0" vertical-offset="1981" max-vertical-offset="2380">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BellmanFord.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BellmanFord.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="15" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PriorityDijkstra.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PriorityDijkstra.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="23" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1887">
               <folding>
-                <element signature="e#71#108#0" expanded="true" />
+                <element signature="e#15#68#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PriorityDijkstra.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PriorityDijkstra.py">
+      <file leaf-file-name="Generatore.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Generatore.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="14" selection-start="696" selection-end="696" vertical-scroll-proportion="1.518732" vertical-offset="85" max-vertical-offset="1258">
+            <state line="30" column="24" selection-start="1145" selection-end="1145" vertical-scroll-proportion="0.83980584" vertical-offset="147" max-vertical-offset="731">
               <folding />
             </state>
           </provider>
@@ -52,7 +72,16 @@
       <file leaf-file-name="input.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/input.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="4" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="2499">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="406368">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="input2.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/input2.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="15" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
               <folding />
             </state>
           </provider>
@@ -80,24 +109,31 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/main.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/input.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PriorityDijkstra.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Generatore.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/main.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/Prova.py" />
-        <option value="$PROJECT_DIR$/input.txt" />
-        <option value="$PROJECT_DIR$/Generatore.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/input2" />
+        <option value="$PROJECT_DIR$/Monete.py" />
+        <option value="$PROJECT_DIR$/PQbinomialHeap.py" />
+        <option value="$PROJECT_DIR$/input2.txt" />
+        <option value="$PROJECT_DIR$/priorityQueue/PQbinaryHeap.py" />
+        <option value="$PROJECT_DIR$/Generatore.py" />
+        <option value="$PROJECT_DIR$/BellmanFord.py" />
         <option value="$PROJECT_DIR$/PriorityDijkstra.py" />
+        <option value="$PROJECT_DIR$/input.txt" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -127,6 +163,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -147,17 +184,16 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="last_opened_file_path" value="C:/Python27/python.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Ellebbi" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -167,9 +203,10 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Federico\PycharmProjects\Inquinopoli" />
+      <recent name="C:\Users\Federico\Downloads\StruttureCollegate\Lezione_1\linked_ds\trees" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.Generatore">
     <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -202,7 +239,9 @@
       <module name="Inquinopoli" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Generatore.py" />
       <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
@@ -219,6 +258,42 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Inquinopoli" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PriorityDijkstra.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="PQbinomialHeap" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Inquinopoli" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PQbinomialHeap.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="BellmanFord" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Inquinopoli" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BellmanFord.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -345,16 +420,20 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.main" />
       <item index="1" class="java.lang.String" itemvalue="Python.Generatore" />
       <item index="2" class="java.lang.String" itemvalue="Python.PriorityDijkstra" />
+      <item index="3" class="java.lang.String" itemvalue="Python.PQbinomialHeap" />
+      <item index="4" class="java.lang.String" itemvalue="Python.BellmanFord" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.main" />
-        <item index="1" class="java.lang.String" itemvalue="Python.PriorityDijkstra" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Generatore" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.Generatore" />
+        <item index="1" class="java.lang.String" itemvalue="Python.main" />
+        <item index="2" class="java.lang.String" itemvalue="Python.BellmanFord" />
+        <item index="3" class="java.lang.String" itemvalue="Python.PriorityDijkstra" />
+        <item index="4" class="java.lang.String" itemvalue="Python.PQbinomialHeap" />
       </list>
     </recent_temporary>
   </component>
@@ -419,7 +498,51 @@
       <created>1390293763640</created>
       <updated>1390293763640</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="-Dijkstra acerbo">
+      <created>1390299858733</created>
+      <updated>1390299858733</updated>
+    </task>
+    <task id="LOCAL-00011" summary="-Dijkstra acerbo">
+      <created>1390300856954</created>
+      <updated>1390300856954</updated>
+    </task>
+    <task id="LOCAL-00012" summary="-Dijkstra acerbo">
+      <created>1390300937725</created>
+      <updated>1390300937725</updated>
+    </task>
+    <task id="LOCAL-00013" summary="-Dijkstra acerbo">
+      <created>1390301261860</created>
+      <updated>1390301261860</updated>
+    </task>
+    <task id="LOCAL-00014" summary="- Funzia, ma ho qualche sospetto!">
+      <created>1390318915001</created>
+      <updated>1390318915001</updated>
+    </task>
+    <task id="LOCAL-00015" summary="- Aggiunti commenti a Dijkstra e Check">
+      <created>1390563467211</created>
+      <updated>1390563467211</updated>
+    </task>
+    <task id="LOCAL-00016" summary="- Aggiunte Code con Priorità&#10;- Aggiunti alberi&#10;- Aggiunti Dijkstra mejo">
+      <created>1390814284281</created>
+      <updated>1390814284281</updated>
+    </task>
+    <task id="LOCAL-00017" summary="- Aggiunte Code con Priorità&#10;- Aggiunti alberi&#10;- Aggiunti Dijkstra mejo">
+      <created>1390814317770</created>
+      <updated>1390814317770</updated>
+    </task>
+    <task id="LOCAL-00018" summary="- Aggiunte Code con Priorità&#10;- Aggiunti alberi&#10;- Aggiunti Dijkstra mejo">
+      <created>1390820255162</created>
+      <updated>1390820255162</updated>
+    </task>
+    <task id="LOCAL-00019" summary="- Aggiunte Code con Priorità&#10;- Aggiunti alberi&#10;- Aggiunti Dijkstra mejo">
+      <created>1390821888138</created>
+      <updated>1390821888138</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Il generatore genera un solo caso, ma lo fa i mezzo secondo l'80% delle volte.">
+      <created>1392114823431</created>
+      <updated>1392114823431</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -443,28 +566,33 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32656515" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17498139" sideWeight="0.6322034" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29541597" sideWeight="0.5003723" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3677966" sideWeight="0.4996277" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24981412" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19553903" sideWeight="0.67232597" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39898133" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32427844" sideWeight="0.50111526" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25466892" sideWeight="0.49888477" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34465197" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282572" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -482,71 +610,248 @@
     <MESSAGE value=" - Generatore corretto&#10; - Aggiunta la funzione &quot;lettura&quot; per prendere i dati dal file input.txt&#10; - Conseguente creazione del grafo" />
     <MESSAGE value="- Aggiunta la libreria time&#10;- Tentativo di visualizzare il grafo" />
     <MESSAGE value="- self.streets ora è un dizionario" />
-    <option name="LAST_COMMIT_MESSAGE" value="- self.streets ora è un dizionario" />
+    <MESSAGE value="-Dijkstra acerbo" />
+    <MESSAGE value="- Funzia, ma ho qualche sospetto!" />
+    <MESSAGE value="- Aggiunti commenti a Dijkstra e Check" />
+    <MESSAGE value="- Aggiunte Code con Priorità&#10;- Aggiunti alberi&#10;- Aggiunti Dijkstra mejo" />
+    <MESSAGE value="Il generatore genera un solo caso, ma lo fa i mezzo secondo l'80% delle volte." />
+    <option name="LAST_COMMIT_MESSAGE" value="Il generatore genera un solo caso, ma lo fa i mezzo secondo l'80% delle volte." />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="7" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/input.txt">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="4" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="2499">
+        <state line="119" column="19" selection-start="5966" selection-end="5966" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2448">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/path.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BellmanFord.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="28" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2261">
+        <state line="7" column="12" selection-start="152" selection-end="152" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="357">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriorityDijkstra.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="59" selection-start="4730" selection-end="4730" vertical-scroll-proportion="0.0" vertical-offset="1598" max-vertical-offset="1887">
           <folding>
-            <element signature="e#71#108#0" expanded="true" />
+            <element signature="e#15#68#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Generatore.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="1085" selection-end="1085" vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="748">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+        <state line="6" column="26" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="748">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="27" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1972">
+        <state line="119" column="19" selection-start="5966" selection-end="5966" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2448">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BellmanFord.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="12" selection-start="152" selection-end="152" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="357">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriorityDijkstra.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="59" selection-start="4730" selection-end="4730" vertical-scroll-proportion="0.0" vertical-offset="1598" max-vertical-offset="1887">
           <folding>
-            <element signature="e#71#108#0" expanded="true" />
+            <element signature="e#15#68#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Generatore.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="51" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="663">
+        <state line="6" column="26" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="748">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="19" selection-start="5966" selection-end="5966" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2448">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BellmanFord.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="12" selection-start="152" selection-end="152" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="357">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriorityDijkstra.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="59" selection-start="4730" selection-end="4730" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1887">
+          <folding>
+            <element signature="e#15#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Generatore.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="26" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="748">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="133" column="19" selection-start="6249" selection-end="6249" vertical-scroll-proportion="0.0" vertical-offset="2261" max-vertical-offset="2414">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/priorityQueue/PQbinaryHeap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="792" selection-end="792" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="2533" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="15" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="255" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriorityDijkstra.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="0" selection-start="4471" selection-end="4471" vertical-scroll-proportion="0.0" vertical-offset="1547" max-vertical-offset="1887">
+          <folding>
+            <element signature="e#15#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Generatore.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="20" selection-start="903" selection-end="903" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="748">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/input.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="5" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="935">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="50694" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="22" selection-start="5970" selection-end="5970" vertical-scroll-proportion="0.0" vertical-offset="1988" max-vertical-offset="2363">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/priorityQueue/PQbinaryHeap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="36" selection-start="2189" selection-end="2189" vertical-scroll-proportion="0.0" vertical-offset="1241" max-vertical-offset="2533" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriorityDijkstra.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="23" selection-start="4015" selection-end="4015" vertical-scroll-proportion="0.0" vertical-offset="1377" max-vertical-offset="1887">
+          <folding>
+            <element signature="e#15#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="15" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="255" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="1" selection-start="10" selection-end="10" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="187" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="0" selection-start="5976" selection-end="5976" vertical-scroll-proportion="0.0" vertical-offset="1964" max-vertical-offset="2414">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/priorityQueue/PQbinaryHeap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="36" selection-start="2189" selection-end="2189" vertical-scroll-proportion="0.0" vertical-offset="1241" max-vertical-offset="2533" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriorityDijkstra.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="51" selection-start="4708" selection-end="4708" vertical-scroll-proportion="0.0" vertical-offset="1598" max-vertical-offset="1887">
+          <folding>
+            <element signature="e#15#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="15" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="255" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="1" selection-start="10" selection-end="10" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="187" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="35" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0" vertical-offset="91" max-vertical-offset="2635">
-          <folding>
-            <element signature="e#71#108#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -565,32 +870,76 @@
         <state line="216" column="0" selection-start="8185" selection-end="8185" vertical-scroll-proportion="0.3323782" vertical-offset="3437" max-vertical-offset="15351" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Generatore.py">
+    <entry file="file://$PROJECT_DIR$/Monete.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="15" selection-start="1161" selection-end="1161" vertical-scroll-proportion="1.9767442" vertical-offset="0" max-vertical-offset="782">
+        <state line="44" column="10" selection-start="1076" selection-end="1076" vertical-scroll-proportion="0.19883041" vertical-offset="680" max-vertical-offset="1037" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/priorityQueue/PQ_Dheap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.3206997" vertical-offset="1139" max-vertical-offset="2737" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PQbinomialHeap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="150" column="40" selection-start="5044" selection-end="5044" vertical-scroll-proportion="0.5947522" vertical-offset="2346" max-vertical-offset="3910" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/linked_ds/trees/treeArrayList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="445" selection-end="445" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="986" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/priorityQueue/PQbinaryHeap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="792" selection-end="792" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2533" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="15" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/input.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="4" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2499">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="174454">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriorityDijkstra.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="23" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1887">
+          <folding>
+            <element signature="e#15#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BellmanFord.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="15" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="144" column="19" selection-start="6576" selection-end="6576" vertical-scroll-proportion="0.0" vertical-offset="2267" max-vertical-offset="2601">
-          <folding>
-            <element signature="e#71#108#0" expanded="true" />
-          </folding>
+        <state line="16" column="24" selection-start="710" selection-end="710" vertical-scroll-proportion="0.0" vertical-offset="1981" max-vertical-offset="2380">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PriorityDijkstra.py">
+    <entry file="file://$PROJECT_DIR$/Generatore.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="14" selection-start="696" selection-end="696" vertical-scroll-proportion="1.518732" vertical-offset="85" max-vertical-offset="1258">
+        <state line="30" column="24" selection-start="1145" selection-end="1145" vertical-scroll-proportion="0.83980584" vertical-offset="147" max-vertical-offset="731">
           <folding />
         </state>
       </provider>
