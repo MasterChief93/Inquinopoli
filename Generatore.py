@@ -3,7 +3,7 @@ __author__ = 'Federico'
 from random import randrange
 from time import time
 
-def generator():
+def generator(): # Federico
     file = open('input.txt','w')
     stringonona = ''
     nodes = randrange(1,200)                #numero città
@@ -33,7 +33,43 @@ def generator():
     file.write(stringonona)
     file.close()
 
+#start = time()
+#generator()
+#end = time()
+#print "done in: ", end-start
+
+def Generator(): # Fabrizio
+    file = open('./input.txt','w')
+    i=1
+    cases=randrange(1,50)
+    file.write(str(cases)+"\n\n")
+    for _ in range(0,1):
+        nodelist=[]
+        archlist=[]
+        for _ in range(1,randrange(3,200)):
+            node=[i,randrange(1,20)]
+            i+=1
+            nodelist.append(node)
+        n=len(nodelist)
+        file.write(str(n)+"\n")
+        for node in nodelist:
+            inq=str(node[1])
+            file.write(inq+" ")
+        for _ in range(1,randrange(2,200)):
+            randstart=randrange(1,n)
+            randend=randrange(1,n)
+            arch=[randstart,randend]
+            revarch=[randend,randstart]
+            if not arch in archlist and randstart!=randend and not revarch in archlist:
+                archlist.append(arch)
+    #print nodelist
+    #print archlist
+    #print [len(nodelist),len(archlist)]
+    file.close()
+    print cases
+
 start = time()
-generator()
+Generator()
 end = time()
 print "done in: ", end-start
+
