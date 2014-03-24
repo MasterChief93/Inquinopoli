@@ -1,4 +1,4 @@
-__author__ = 'Fabrizio'
+__author__ = 'Fabrizio' # generatore definitivo !
 
 from random import randrange,choice
 
