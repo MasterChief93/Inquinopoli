@@ -36,8 +36,8 @@ def generatore():
                     archlist_final.append(coppia[scelta])
                     matrice[i][j]=0
                     matrice[j][i]=0
-    print mfinal
-    print archlist_final
+    # print mfinal
+    # print archlist_final
     if mfinal!=len(archlist_final):
         archlist_definitive=[]
         for _ in range(0,mfinal):

@@ -1,6 +1,6 @@
 # coding=utf-8
 __author__ = 'Federico'
-from random import randrange
+from random import randrange,choice
 from time import time
 
 def generator(): # Federico
@@ -58,16 +58,43 @@ def Generator(): # Fabrizio
             inq=str(node[1]) # inq è il tasso di inquinamento, essendo il nodo di persè una lista ([numero del nodo,inquinamento]) allora abbiamo inq=str(node[1]), passato come stringa dovendolo scrivere su file
             file.write(inq+" ") # scrittura del tasso di inquinamento di ogni nodo, seguita da uno spazio
         file.write("\n") # il file di input, dopo aver scritto tutti i tassi di inquinamento dei nodi, prevede di passare alla riga successiva
-        for _ in range(1,randrange(2,1000)): # ciclo che si occupa della creazione di tutti gli archi presenti nel caso. ATTENZIONE : manca da definire il numero massimo di archi presenti nel grafo e definire il comportamento del generatore quando ci sono 0 archi
-            randstart=randrange(1,n) # randstart indica il nodo di partenza del futuro arco
-            randend=randrange(1,n) # randend indica il nodo di arrivo del futuro arco
-            arch=[randstart,randend] # creazione dell'arco con struttura lista [partenza,arrivo]
-            revarch=[randend,randstart] # revarch è l'arco di senso opposto all'arco appena creato. Serve alla riga successiva per il controllo : non ci può essere più di un arvo tra due nodi.
-            if not arch in archlist and randstart!=randend and not revarch in archlist: # controllo se l'arco creato può essere aggiunto alla lista degli archi. I controlli in ordine sono : l'arco non è gia presente nella lista degli archi, l'arco non collega un nodo a se stesso, l'arco è l'unico che collega i due nodi
-                archlist.append(arch) # superato ogni controllo, l'arco viene aggiunto alla lista deli archi presenti nel caso
-        m=len(archlist) # m indica la lunghezza di archlist, ovvero il numero di archi presenti nel caso
+        for i in range(1,len(nodelist)): # ciclo che si occupa della creazione di tutti gli archi presenti nel caso. ATTENZIONE : manca da definire il numero massimo di archi presenti nel grafo e definire il comportamento del generatore quando ci sono 0 archi
+            archi = []
+            for j in range(1,len(nodelist)):     # randstart indica il nodo di partenza del futuro arco
+            # randend indica il nodo di arrivo del futuro arco
+
+                if j != i:
+                    arch = [i,j] # creazione dell'arco con struttura lista [partenza,arrivo]
+                    archi.append(arch)
+                else:
+                    arch = [0]
+                    archi.append(arch)
+            archlist.append(archi)
+            # revarch=[randend,randstart] # revarch è l'arco di senso opposto all'arco appena creato. Serve alla riga successiva per il controllo : non ci può essere più di un arvo tra due nodi.
+            # if not arch in archlist and randstart!=randend and not revarch in archlist: # controllo se l'arco creato può essere aggiunto alla lista degli archi. I controlli in ordine sono : l'arco non è gia presente nella lista degli archi, l'arco non collega un nodo a se stesso, l'arco è l'unico che collega i due nodi
+            #     archlist.append(arch) # superato ogni controllo, l'arco viene aggiunto alla lista deli archi presenti nel caso
+        print archlist[0]
+        print archlist[1]
+        for i in range(0,len(archlist)):
+            for j in range(0,len(archlist[i])):
+                coppia = [archlist[i][j],archlist[j][i]]
+                print coppia, i , j
+                elem = choice(coppia)
+                if elem == coppia[0]:
+                    archlist[i].remove(elem)
+                else:
+                    archlist[j].remove(elem)
+        archlist_final = []
+        for i in range(0,len(archlist)):
+            for j in range(0,len(archlist[i])):
+                if archlist[i][j] != 0:
+                    archlist_final.append(archlist[i][j])
+
+
+
+        m=len(archlist_final) # m indica la lunghezza di archlist, ovvero il numero di archi presenti nel caso
         file.write(str(m)+"\n") # nel file di input si deve ora scrivere il numero di archi presenti nel caso e passare alla riga successiva
-        for element in archlist: # ciclo che si occupa di scrivere sul file tutti gli archi presenti nel caso, uno per ogni riga, scrivendo :   nodo di partenza    nodo di arrivo
+        for element in archlist_final: # ciclo che si occupa di scrivere sul file tutti gli archi presenti nel caso, uno per ogni riga, scrivendo :   nodo di partenza    nodo di arrivo
             file.write(str(element[0])+" "+str(element[1])+"\n") # scrittura sopra citata
     q=randrange(1,n) # q è il numero di query, indica il numero di nodi che dovranno essere raggiunte dal nodo 1
     file.write(str(q)+"\n") # scrittura di q sul file di input e cambio di riga
