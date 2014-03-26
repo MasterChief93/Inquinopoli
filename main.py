@@ -3,6 +3,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 #from PriorityDijkstra import dijkstra2,dijkstra
 from BellmanFord import bellmanford
+from generatore2 import generatore
 from time import time           #from graph_tool.all import *
 
 class City:
@@ -105,7 +106,7 @@ class Grafo:
 
 
 def main(file):
-    result = lettura(file)
+    result = generatore()
     G = Grafo()
     Gr = nx.DiGraph()
           #E' il secondo esempio del file input nel progetto
@@ -119,7 +120,7 @@ def main(file):
 
     #print G.streets[6]
     #dijkstra2(G,1,7)
-    bellmanford(G,3)
+    bellmanford(G,5)
     nx.draw(Gr)
     plt.savefig("path.png")
 
