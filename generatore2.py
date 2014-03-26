@@ -3,7 +3,7 @@ __author__ = 'Fabrizio' # generatore definitivo !
 from random import randrange
 
 def generatore(): # questo generatore crea grafi ottimali per provare l'algoritmo
-    n=10
+    n=20
     m=n*(n-1)
     nodelist=[]
     archlist=[]
@@ -16,11 +16,14 @@ def generatore(): # questo generatore crea grafi ottimali per provare l'algoritm
             if x!=y:
                 arch=[x,y]
                 archlist.append(arch)
-    print nodelist
-    return archlist
+    pm20list = []
+    for elem in nodelist:
+        pm20list.append(elem[1])
+    #print nodelist
+    return [10,pm20list,archlist]
 
 
-print generatore()
+#print generatore()
 
 
 
