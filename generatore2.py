@@ -19,8 +19,21 @@ def generatore(): # questo generatore crea grafi ottimali per provare l'algoritm
     print nodelist
     return archlist
 
+def Generatore():
+    n=10
+    nodelist=[]
+    archlist=[]
+    pol=1
+    for i in range(1,n+1):
+        pol+=1
+        node=[i,pol]
+        nodelist.append(node)
+    for x in range(1,n+1):
+        for y in range(1,n+1):
+            if x!=y:
+                arch=[x,y]
+                archlist.append(arch)
+    print nodelist
+    return archlist
 
-print generatore()
-
-
-
+print Generatore()
