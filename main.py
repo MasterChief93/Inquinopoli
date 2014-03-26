@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import networkx as nx
 import matplotlib.pyplot as plt
-from PriorityDijkstra import dijkstra2,dijkstra
+#from PriorityDijkstra import dijkstra2,dijkstra
 from BellmanFord import bellmanford
 from time import time           #from graph_tool.all import *
 
@@ -107,21 +107,21 @@ class Grafo:
 def main(file):
     result = lettura(file)
     G = Grafo()
-    #Gr = nx.DiGraph()
+    Gr = nx.DiGraph()
           #E' il secondo esempio del file input nel progetto
     for i in range(len(result[1])):
         G.insertCity(i+1,result[1][i])
-        #Gr.add_node(i+1)
+        Gr.add_node(i+1)
 
     for elem in result[2]:
         G.insertStreet(int(elem[0]),int(elem[1]))
-        #Gr.add_edge(int(elem[0]),int(elem[1]))
+        Gr.add_edge(int(elem[0]),int(elem[1]))
 
     #print G.streets[6]
     #dijkstra2(G,1,7)
-    bellmanford(G,7)
-    #nx.draw(Gr)
-    #plt.savefig("path.png")
+    bellmanford(G,3)
+    nx.draw(Gr)
+    plt.savefig("path.png")
 
 def lettura(file):
     x = file.readlines()
