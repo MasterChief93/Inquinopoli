@@ -2,8 +2,8 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 #from PriorityDijkstra import dijkstra2,dijkstra
-from BellmanFord import bellmanford
-from generatore2 import generatore
+import BellmanFord
+from generatore2 import Generatore
 from time import time           #from graph_tool.all import *
 
 class City:
@@ -77,8 +77,9 @@ class Grafo:
             now = s.pop(0)              #e il pop del primo elemento. è semplicemente una pila
             state[now] == 1
             Explored.append(now)
+            print self.streets
             for elem in self.streets:
-                if elem[0] == now:
+                if self.streets[elem] == now:
                     new = elem[1]
                     if not new in state or state[now] == 1:
                         state[new] = 0
@@ -106,7 +107,7 @@ class Grafo:
 
 
 def main(file):
-    result = generatore()
+    result = lettura(file)#Generatore()
     G = Grafo()
     Gr = nx.DiGraph()
           #E' il secondo esempio del file input nel progetto
@@ -120,7 +121,7 @@ def main(file):
 
     #print G.streets[6]
     #dijkstra2(G,1,7)
-    bellmanford(G,5)
+    print BellmanFord.dfscyclerec(G,1)
     nx.draw(Gr)
     plt.savefig("path.png")
 

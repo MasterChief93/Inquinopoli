@@ -41,7 +41,7 @@ def Generatore():
     pm20list = []
     for elem in nodelist:
         pm20list.append(elem[1])
-    print nodelist
+    #print nodelist
     return [10,pm20list,archlist]
 
 
