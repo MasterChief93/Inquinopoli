@@ -30,6 +30,7 @@ def bellmanford(G, arr):
     else:
         print Distance[arr]
 
+
 def bellmanford2(G, arr):
     Distance = dict()
     citta = G.cities
@@ -47,16 +48,15 @@ def bellmanford2(G, arr):
         return 0
     elif Distance[arr] == float("+inf"):
         return "?"
-    # if G.streets[arr] > 0:
-    #     for street in G.streets[arr]:
-    #         for strada in G.streets[street.arr]:
-    #             if Distance[strada.par] + strada.peso <= Distance[strada.arr]:
-    #                 Distance[strada.arr] = Distance[strada.par] + strada.peso
-    #
+        # if G.streets[arr] > 0:
+        #     for street in G.streets[arr]:
+        #         for strada in G.streets[street.arr]:
+        #             if Distance[strada.par] + strada.peso <= Distance[strada.arr]:
+        #                 Distance[strada.arr] = Distance[strada.par] + strada.peso
+        #
 
 
-
-def dfscyclerec(G,root):
+def dfscyclerec(G, root):
     state = dict()                      #stesso funzionamento della visita generica
     for elem in G.cities:                     #ma al posto del set uso una lista e invece dell'add uso un insert alla posizione 0
         state[elem] = -1
@@ -76,10 +76,63 @@ def dfscyclerec(G,root):
                 s.append(street.arr)
 
             else:
-                if street.arr in Explored and street.par in Explored and Explored.index(street.par) < Explored.index(street.arr):
-                    other.append([street.par,street.arr])
+                if street.arr in Explored and street.par in Explored and Explored.index(street.par) < Explored.index(
+                        street.arr):
+                    other.append([street.par, street.arr])
     print other
     print Explored
+
+
+def Dfs():
+    revarch = []
+    nodelist = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    archlist = [[1,2],[1,4],[1,5],[2,3],[3,10],[3,1],[10,2]]
+    Dict = dict()
+    level=dict()
+    ext1=[1]
+    ext2=[]
+    level[1]=0
+    i=1
+    for node in nodelist:
+        Dict[node] = -1
+    while len(ext1) !=0:
+        for elem in ext1:
+            for arch in archlist:
+                if arch[0]==elem and arch[1] not in level:
+                    ext2.append(arch[1])
+                    level[arch[1]]=i
+        ext1=ext2
+        ext2=[]
+        i+=1
+    T = []
+    P = []
+    Dict[1] = 0
+    P.insert(0, 1)
+    #c=0
+    while len(P) > 0:
+        u = P.pop(0)
+        T.append(u)
+        #c+=1
+        for arch in archlist:
+            if arch[0] == u:
+                if Dict[arch[1]] == -1:
+                    P.insert(0, arch[1])
+                    Dict[arch[1]] = 0
+                else:
+                    if level[arch[1]]<level[arch[0]]:
+                        revarch.append(arch)
+    print T
+    print revarch
+
+
+Dfs()
+
+
+
+
+
+
+
 
 
 

@@ -24,7 +24,7 @@ def generatore(): # questo generatore crea grafi ottimali per provare l'algoritm
 
 #print generatore()
 
-def Generatore():
+def Generatore():  #TODO generatore in uso
     n=10
     nodelist=[]
     archlist=[]
