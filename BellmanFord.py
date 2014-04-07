@@ -86,7 +86,7 @@ def dfscyclerec(G, root):
 def Dfs():
     revarch = []
     nodelist = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    archlist = [[1,2],[1,4],[1,5],[2,3],[3,10],[3,1],[10,2]]
+    archlist = [[1,2],[1,3],[1,4],[2,3],[3,4],[2,5],[2,6],[2,1],[3,7],[7,6],[6,8],[5,8],[3,4],[4,8],[5,9],[9,10],[10,5],[10,9],[10,1]]
     Dict = dict()
     level=dict()
     ext1=[1]
@@ -108,11 +108,9 @@ def Dfs():
     P = []
     Dict[1] = 0
     P.insert(0, 1)
-    #c=0
     while len(P) > 0:
         u = P.pop(0)
         T.append(u)
-        #c+=1
         for arch in archlist:
             if arch[0] == u:
                 if Dict[arch[1]] == -1:
@@ -121,11 +119,10 @@ def Dfs():
                 else:
                     if level[arch[1]]<level[arch[0]]:
                         revarch.append(arch)
-    print T
-    print revarch
+    return revarch
 
 
-Dfs()
+print Dfs()
 
 
 
