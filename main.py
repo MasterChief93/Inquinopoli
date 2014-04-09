@@ -121,7 +121,7 @@ def main(file):
 
     #print G.streets[6]
     #dijkstra2(G,1,7)
-    print BellmanFord.dfscyclerec(G,1)
+    print BellmanFord.Dfs(G,4)
     nx.draw(Gr)
     plt.savefig("path.png")
 

@@ -1,53 +1,55 @@
 __author__ = 'Federico'
 # -*- coding: utf-8 -*-
 
-def bellmanford(G, arr):
-    Distance = dict()
-    citta = G.cities
-    Hit = dict()
-    for strade in citta:
-        Distance[strade] = float("+inf")
-        Hit[strade] = 0
-    Distance[1] = 0
-    print Distance
-
-    for city in G.streets:
-        for street in G.streets[city]:
-            if Distance[street.par] != float("+inf") and Distance[street.par] + street.peso <= Distance[street.arr]:
-                Hit[street.par] += 1
-                Hit[street.arr] += 1
-                old = Distance[street.arr]
-                Distance[street.arr] = Distance[street.par] + street.peso
-                if Hit[street.arr] > 1 and Distance[street.arr] <= old:
-                    if street.arr in G.streets:
-                        for extra_street in G.streets[street.arr]:
-                            Distance[extra_street.arr] = Distance[extra_street.par] + extra_street.peso
-    print Hit
-    if Distance[arr] < 3:
-        print 0
-    elif Distance[arr] == float("+inf"):
-        print "?"
-    else:
-        print Distance[arr]
+# def bellmanford(G, arr):
+#     Distance = dict()
+#     citta = G.cities
+#     Hit = dict()
+#     for strade in citta:
+#         Distance[strade] = float("+inf")
+#         Hit[strade] = 0
+#     Distance[1] = 0
+#     print Distance
+#
+#     for city in G.streets:
+#         for street in G.streets[city]:
+#             if Distance[street.par] != float("+inf") and Distance[street.par] + street.peso <= Distance[street.arr]:
+#                 Hit[street.par] += 1
+#                 Hit[street.arr] += 1
+#                 old = Distance[street.arr]
+#                 Distance[street.arr] = Distance[street.par] + street.peso
+#                 if Hit[street.arr] > 1 and Distance[street.arr] <= old:
+#                     if street.arr in G.streets:
+#                         for extra_street in G.streets[street.arr]:
+#                             Distance[extra_street.arr] = Distance[extra_street.par] + extra_street.peso
+#     print Hit
+#     if Distance[arr] < 3:
+#         print 0
+#     elif Distance[arr] == float("+inf"):
+#         print "?"
+#     else:
+#         print Distance[arr]
 
 
 def bellmanford2(G, arr):
     Distance = dict()
     citta = G.cities
-    Hit = dict()
+    #Hit = dict()
     for strade in citta:
         Distance[strade] = float("+inf")
-        Hit[strade] = 0
     Distance[1] = 0
+
     for city in G.streets:
         for street in G.streets[city]:
             if Distance[street.par] != float("+inf") and Distance[street.par] + street.peso <= Distance[street.arr]:
                 Distance[street.arr] = Distance[street.par] + street.peso
-    print Distance
+    #print Distance
+
     if Distance[arr] < 3:
         return 0
     elif Distance[arr] == float("+inf"):
         return "?"
+
         # if G.streets[arr] > 0:
         #     for street in G.streets[arr]:
         #         for strada in G.streets[street.arr]:
@@ -56,37 +58,15 @@ def bellmanford2(G, arr):
         #
 
 
-def dfscyclerec(G, root):
-    state = dict()                      #stesso funzionamento della visita generica
-    for elem in G.cities:                     #ma al posto del set uso una lista e invece dell'add uso un insert alla posizione 0
-        state[elem] = -1
-    state[root] = 1
-    Explored = []
-    other = []
-    s = [root]
-    i = 0
-    while len(s) > 0:
-        elem = s.pop(0)
-        Explored.append(elem)
-        print s
-        for street in G.streets[elem]:
-            #state[street.arr] = 0
-            if state[street.arr] != 1:
-                state[street.arr] = 1
-                s.append(street.arr)
-
-            else:
-                if street.arr in Explored and street.par in Explored and Explored.index(street.par) < Explored.index(
-                        street.arr):
-                    other.append([street.par, street.arr])
-    print other
-    print Explored
-
-
-def Dfs():
+def Dfs(G,arr):
     revarch = []
-    nodelist = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    archlist = [[1,2],[1,3],[1,4],[2,3],[3,4],[2,5],[2,6],[2,1],[3,7],[7,6],[6,8],[5,8],[3,4],[4,8],[5,9],[9,10],[10,5],[10,9],[10,1]]
+    nodelist = []
+    archlist = []
+    for city in G.streets:
+        for street in G.streets[city]:
+            archlist.append([street.par,street.arr,street.peso])
+    for city in G.cities:
+        nodelist.append(city)
     Dict = dict()
     level=dict()
     ext1=[1]
@@ -104,6 +84,7 @@ def Dfs():
         ext1=ext2
         ext2=[]
         i+=1
+
     T = []
     P = []
     Dict[1] = 0
@@ -119,10 +100,47 @@ def Dfs():
                 else:
                     if level[arch[1]]<level[arch[0]]:
                         revarch.append(arch)
-    return revarch
+
+    print revarch
+    Distance = dict()
+    for strade in G.cities:
+        Distance[strade] = float("+inf")
+    Distance[1] = 0
+    current = [1]
+    future = []
+    while len(current) != 0:
+
+        for elem in current:
+
+            if elem in G.streets:
+
+                for street in G.streets[elem]:
+
+                    if Distance[street.par] != float("+inf") and Distance[street.arr] > Distance[street.par] + street.peso:
 
 
-print Dfs() #dajeeee
+                        if ([street.par,street.arr,street.peso] in revarch) and (Distance[street.par] + street.peso < Distance[street.arr]):
+                            Distance[street.arr] = Distance[street.par] = float("-inf")
+                        else:
+                            Distance[street.arr] = Distance[street.par] + street.peso
+                        print Distance
+                        if street.arr not in future:
+                            future.append(street.arr)
+        current = future
+        future = []
+
+
+    print Distance
+
+    if Distance[arr] < 3:
+        return 0
+    elif Distance[arr] == float("+inf"):
+        return "?"
+    else:
+        return Distance[arr]
+
+
+#print bellmanford2() #TODO dajeeee
 
 
 
