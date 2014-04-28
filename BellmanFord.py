@@ -1,6 +1,8 @@
 __author__ = 'Federico'
 # -*- coding: utf-8 -*-
 
+from generatore2 import Generatore
+
 # def bellmanford(G, arr):
 #     Distance = dict()
 #     citta = G.cities
@@ -43,7 +45,7 @@ def bellmanford2(G, arr):
         for street in G.streets[city]:
             if Distance[street.par] != float("+inf") and Distance[street.par] + street.peso <= Distance[street.arr]:
                 Distance[street.arr] = Distance[street.par] + street.peso
-    #print Distance
+                #print Distance
 
     if Distance[arr] < 3:
         return 0
@@ -58,37 +60,38 @@ def bellmanford2(G, arr):
         #
 
 
-def Dfs(G,arr):
+def Dfs(G, arr):
     revarch = []
     nodelist = []
     archlist = []
     for city in G.streets:
         for street in G.streets[city]:
-            archlist.append([street.par,street.arr,street.peso])
+            archlist.append([street.par, street.arr, street.peso])
     for city in G.cities:
         nodelist.append(city)
     Dict = dict()
-    level=dict()
-    ext1=[1]
-    ext2=[]
-    level[1]=0
-    i=1
+    level = dict()
+    ext1 = [1]
+    ext2 = []
+    level[1] = 0
+    i = 1
     for node in nodelist:
         Dict[node] = -1
-    while len(ext1) !=0:
+    while len(ext1) != 0:
         for elem in ext1:
             for arch in archlist:
-                if arch[0]==elem and arch[1] not in level:
+                if arch[0] == elem and arch[1] not in level:
                     ext2.append(arch[1])
-                    level[arch[1]]=i
-        ext1=ext2
-        ext2=[]
-        i+=1
+                    level[arch[1]] = i
+        ext1 = ext2
+        ext2 = []
+        i += 1
 
     T = []
     P = []
     Dict[1] = 0
     P.insert(0, 1)
+
     while len(P) > 0:
         u = P.pop(0)
         T.append(u)
@@ -98,10 +101,23 @@ def Dfs(G,arr):
                     P.insert(0, arch[1])
                     Dict[arch[1]] = 0
                 else:
-                    if level[arch[1]]<level[arch[0]]:
+                    if level[arch[1]] < level[arch[0]]:
                         revarch.append(arch)
+                        #print revarch
+    cycles = []
+    #for arch in revarch:
+    #   temp1=[arch[0]]
+    #    temp2=[arch[0]]
+    #   if len(temp1)>1:
+    #      for elem in temp1:
+    #         temp2.extend(temp2)
+    #        temp2.remove(temp2[0])
+    #print temp1,temp2
+    #for i in range(0,len(temp1)):
+    #   for street in G.streets[temp1[i]]:
 
-    print revarch
+
+
     Distance = dict()
     for strade in G.cities:
         Distance[strade] = float("+inf")
@@ -116,21 +132,22 @@ def Dfs(G,arr):
 
                 for street in G.streets[elem]:
 
-                    if Distance[street.par] != float("+inf") and Distance[street.arr] > Distance[street.par] + street.peso:
+                    if Distance[street.par] != float("+inf") and Distance[street.arr] > Distance[
+                        street.par] + street.peso:
 
 
-                        if ([street.par,street.arr,street.peso] in revarch) and (Distance[street.par] + street.peso < Distance[street.arr]):
+                        if ([street.par, street.arr, street.peso] in revarch) and (
+                                    Distance[street.par] + street.peso < Distance[street.arr]):
                             Distance[street.arr] = Distance[street.par] = float("-inf")
                         else:
                             Distance[street.arr] = Distance[street.par] + street.peso
-                        print Distance
+                            #print Distance
                         if street.arr not in future:
                             future.append(street.arr)
         current = future
         future = []
 
-
-    print Distance
+    #print Distance
 
     if Distance[arr] < 3:
         return 0
@@ -143,11 +160,32 @@ def Dfs(G,arr):
 #print bellmanford2() #TODO dajeeee
 
 
-
-
-
-
-
-
-
-
+def Bel3(G, s):
+    #Generatore()
+    Distance = dict()
+    archi = []
+    for citta in G.cities:
+        Distance[citta] = float("+inf")
+        if citta in G.streets:
+            for street in G.streets[citta]:
+                archi.append(street)
+    Distance[1] = 0
+    for i in range(1, len(G.cities) - 1):
+        for elem in archi:
+            if Distance[elem.par] != float("+inf") and Distance[elem.arr] > Distance[elem.par] + elem.peso:
+                Distance[elem.arr] = Distance[elem.par] + elem.peso
+                if elem.arr == s and Distance[elem.arr] <= 3:
+                    print Distance
+                    return 0
+    cycle = []
+    for i in range(1, len(G.cities) - 1):
+        for elem in archi:
+            if Distance[elem.arr] > Distance[elem.par] + elem.peso:
+                cycle.append([elem.par, elem.arr])
+                if elem.arr == s and Distance[elem.arr] <= 3:
+                    print Distance
+                    return 0
+    if Distance[s]==float("+inf"):
+        return "?"
+    else:
+        return Distance[s]
