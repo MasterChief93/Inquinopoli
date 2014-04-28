@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="418f56e1-391c-4895-a7b9-f5acd410d691" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BellmanFord.py" afterPath="$PROJECT_DIR$/BellmanFord.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Inquinopoli.iml" afterPath="$PROJECT_DIR$/.idea/Inquinopoli.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generatore2.py" afterPath="$PROJECT_DIR$/generatore2.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input2.txt" afterPath="$PROJECT_DIR$/input2.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input2" afterPath="$PROJECT_DIR$/input2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Inquinopoli.iws" />
@@ -43,7 +37,7 @@
       <file leaf-file-name="BellmanFord.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BellmanFord.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="190" column="8" selection-start="5785" selection-end="5785" vertical-scroll-proportion="0.9076087" vertical-offset="2896" max-vertical-offset="3332">
+            <state line="190" column="8" selection-start="5785" selection-end="5785" vertical-scroll-proportion="0.91256833" vertical-offset="2896" max-vertical-offset="3332">
               <folding />
             </state>
           </provider>
@@ -553,7 +547,11 @@
       <created>1396432434355</created>
       <updated>1396432434355</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Bellman Ford, troppo bello per essere vero">
+      <created>1398676787952</created>
+      <updated>1398676787952</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -580,6 +578,7 @@
     <frame x="1" y="1" width="1371" height="726" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15280136" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -588,13 +587,12 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3983051" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21731749" sideWeight="0.50111526" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31118882" sideWeight="0.49888477" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3122807" sideWeight="0.49888477" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34465197" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282572" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -648,7 +646,8 @@
     <MESSAGE value="Il generatore genera un solo caso, ma lo fa i mezzo secondo l'80% delle volte." />
     <MESSAGE value="Il generatore genera un solo caso, ma lo fa in mezzo secondo l'80% delle volte." />
     <MESSAGE value="Bellman Ford funzionante (???)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bellman Ford funzionante (???)" />
+    <MESSAGE value="Bellman Ford, troppo bello per essere vero" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bellman Ford, troppo bello per essere vero" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -743,7 +742,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BellmanFord.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="190" column="8" selection-start="5785" selection-end="5785" vertical-scroll-proportion="0.9076087" vertical-offset="2896" max-vertical-offset="3332">
+        <state line="190" column="8" selection-start="5785" selection-end="5785" vertical-scroll-proportion="0.91256833" vertical-offset="2896" max-vertical-offset="3332">
           <folding />
         </state>
       </provider>
