@@ -551,7 +551,11 @@
       <created>1398676787952</created>
       <updated>1398676787952</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Bellman Ford, troppo bello per essere vero">
+      <created>1398676834397</created>
+      <updated>1398676834397</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
