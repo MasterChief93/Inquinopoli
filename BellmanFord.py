@@ -185,7 +185,16 @@ def Bel3(G, s):
                 if elem.arr == s and Distance[elem.arr] <= 3:
                     print Distance
                     return 0
-    if Distance[s]==float("+inf"):
+    print cycle
+    for elem1 in cycle:
+        prev = Distance[s]
+        for elem in archi:
+            if Distance[elem.par] != float("+inf") and Distance[elem.arr] > Distance[elem.par] + elem.peso:
+                Distance[elem.arr] = Distance[elem.par] + elem.peso
+                if Distance[s] < prev:
+                    print Distance
+                    return 0
+    if Distance[s] == float("+inf"):
         return "?"
     else:
         return Distance[s]
