@@ -108,32 +108,49 @@ class Grafo:
 
 def main(file):
     result = lettura(file)#Generatore()
-    G = Grafo()
-    #Gr = nx.DiGraph()
-          #E' il secondo esempio del file input nel progetto
-    for i in range(len(result[1])):
-        G.insertCity(i+1,result[1][i])
-        #Gr.add_node(i+1)
+    for i in range(0,len(result)):
+        G = Grafo()
+        #Gr = nx.DiGraph()
+              #E' il secondo esempio del file input nel progetto
+        for j in range(len(result[i][1])):
+            G.insertCity(j+1,result[i][1][j])
+            #Gr.add_node(i+1)
 
-    for elem in result[2]:
-        G.insertStreet(int(elem[0]),int(elem[1]))
-        #Gr.add_edge(int(elem[0]),int(elem[1]))
+        for elem in result[i][2]:
+            G.insertStreet(int(elem[0]),int(elem[1]))
+            #Gr.add_edge(int(elem[0]),int(elem[1]))
 
-    #print G.streets[6]
-    #dijkstra2(G,1,7)
-    print BellmanFord.Bel3(G,5)
-    #nx.draw(Gr)
-    #plt.savefig("path.png")
+        #print G.streets[6]
+        #dijkstra2(G,1,7)
+        print BellmanFord.Bel3(G,result[i][3])
+        #nx.draw(Gr)
+        #plt.savefig("path.png")
 
 def lettura(file):
     x = file.readlines()
-    numbnodes = x[0]
-    pm20list = x[1].split(' ')
-    archi = []
-    for i in range(3,len(x)):
-        archi.append(x[i].split(' '))
-    total = [numbnodes,pm20list,archi]
-    return total
+    Total = []
+    numbcase = x[0]
+    i = 1
+    while i != len(x) - 1:
+        if x[i] == "\n":
+            numbnode = x[i+1].strip()
+            pm20list = x[i+2].strip().split(' ')
+            numbarch = x[i+3].strip()
+            archi = []
+            len_archi = i + 3 + int(numbarch) + 1
+            for j in range(i + 4 , len_archi):
+                archi.append(x[j].strip().split(' '))
+            query = []
+            for j in range(len_archi , len_archi + int(x[len_archi]) + 1):
+                query.append(x[j].strip())
+            case = [numbnode,pm20list,archi,query]
+            print case
+            Total.append(case)
+        i = len_archi + int(x[len_archi]) + 1
+    print Total
+    return Total
+    #exit(Total)
+    #return total
 
 start = time()
 file = open('input2.txt','r')

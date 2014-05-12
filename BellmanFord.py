@@ -157,11 +157,12 @@ def Dfs(G, arr):
         return Distance[arr]
 
 
-#print bellmanford2() #TODO dajeeee
+#print bellmanford2()
 
 
-def Bel3(G, s):
+def Bel3(G, list): # TODO inserire query
     #Generatore()
+    qcity= dict()
     Distance = dict()
     archi = []
     for citta in G.cities:
@@ -174,27 +175,28 @@ def Bel3(G, s):
         for elem in archi:
             if Distance[elem.par] != float("+inf") and Distance[elem.arr] > Distance[elem.par] + elem.peso:
                 Distance[elem.arr] = Distance[elem.par] + elem.peso
-                if elem.arr == s and Distance[elem.arr] <= 3:
-                    print Distance
-                    return 0
-    cycle = []
-    for i in range(1, len(G.cities) - 1):
-        for elem in archi:
-            if Distance[elem.arr] > Distance[elem.par] + elem.peso:
-                cycle.append([elem.par, elem.arr])
-                if elem.arr == s and Distance[elem.arr] <= 3:
-                    print Distance
-                    return 0
-    print cycle
-    for elem1 in cycle:
-        prev = Distance[s]
-        for elem in archi:
-            if Distance[elem.par] != float("+inf") and Distance[elem.arr] > Distance[elem.par] + elem.peso:
-                Distance[elem.arr] = Distance[elem.par] + elem.peso
-                if Distance[s] < prev:
-                    print Distance
-                    return 0
-    if Distance[s] == float("+inf"):
-        return "?"
-    else:
-        return Distance[s]
+                if elem.arr in list and Distance[elem.arr] < 3:
+                    #print Distance
+                    qcity[elem.arr]=0
+    #if Distance[s]==float("+inf"):
+    #    print Distance
+    #    return "?"
+    # cycle = []
+    # for i in range(1, len(G.cities) - 1):
+    #     for elem in archi:
+    #         if Distance[elem.arr] > Distance[elem.par] + elem.peso:
+    #             cycle.append([elem.par, elem.arr])
+    #             if elem.arr == s and Distance[elem.arr] < 3:
+    #                 print Distance
+    #                 return 0
+    #print cycle
+    #prev = Distance[s]
+    for elem in list:
+        if qcity[elem]!=0:
+            qcity[elem]=Distance[elem]
+    for elem in archi:
+        if Distance[elem.par] != float("+inf") and Distance[elem.arr] > Distance[elem.par] + elem.peso:
+            Distance[elem.arr] = Distance[elem.par] + elem.peso
+            if elem.arr in list and Distance[elem.arr] < 3:
+                #print Distance
+                qcity[elem.arr]=0
