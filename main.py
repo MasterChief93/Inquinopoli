@@ -131,7 +131,7 @@ def lettura(file):
     Total = []
     numbcase = x[0]
     i = 1
-    while i != len(x) - 1:
+    while i < len(x) - 1:
         if x[i] == "\n":
             numbnode = x[i+1].strip()
             pm20list = x[i+2].strip().split(' ')
