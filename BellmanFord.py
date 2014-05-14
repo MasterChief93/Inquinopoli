@@ -1,8 +1,6 @@
 __author__ = 'Federico'
 # -*- coding: utf-8 -*-
 
-from generatore2 import Generatore
-
 # def bellmanford(G, arr):
 #     Distance = dict()
 #     citta = G.cities
@@ -137,7 +135,7 @@ def Dfs(G, arr):
 
 
                         if ([street.par, street.arr, street.peso] in revarch) and (
-                                    Distance[street.par] + street.peso < Distance[street.arr]):
+                                        Distance[street.par] + street.peso < Distance[street.arr]):
                             Distance[street.arr] = Distance[street.par] = float("-inf")
                         else:
                             Distance[street.arr] = Distance[street.par] + street.peso
@@ -160,9 +158,13 @@ def Dfs(G, arr):
 #print bellmanford2()
 
 
-def Bel3(G, list): # TODO inserire query
+def Bel3(G, list):  # TODO inserire query
     #Generatore()
-    qcity= dict()
+    qcity = dict()
+
+    for elem in list:
+        qcity[elem] = None
+
     Distance = dict()
     archi = []
     for citta in G.cities:
@@ -177,7 +179,8 @@ def Bel3(G, list): # TODO inserire query
                 Distance[elem.arr] = Distance[elem.par] + elem.peso
                 if elem.arr in list and Distance[elem.arr] < 3:
                     #print Distance
-                    qcity[elem.arr]=0
+                    qcity[elem.arr] = 0
+
     #if Distance[s]==float("+inf"):
     #    print Distance
     #    return "?"
@@ -191,12 +194,19 @@ def Bel3(G, list): # TODO inserire query
     #                 return 0
     #print cycle
     #prev = Distance[s]
+    # print Distance
+    # print list
+    # print qcity
     for elem in list:
-        if qcity[elem]!=0:
-            qcity[elem]=Distance[elem]
+        if qcity[elem] != 0:
+            qcity[elem] = Distance[elem]
+
     for elem in archi:
         if Distance[elem.par] != float("+inf") and Distance[elem.arr] > Distance[elem.par] + elem.peso:
             Distance[elem.arr] = Distance[elem.par] + elem.peso
             if elem.arr in list and Distance[elem.arr] < 3:
                 #print Distance
-                qcity[elem.arr]=0
+                qcity[elem.arr] = 0
+
+    for elem in qcity:
+        print elem , qcity[elem]

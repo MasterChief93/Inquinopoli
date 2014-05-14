@@ -39,6 +39,6 @@ def Generatore(): # TODO troppo lento, da migliorare
         file.write("\n")
     file.close()
 
-start=time()
-Generatore()
-print time()-start
+# start=time()
+# Generatore()
+# print time()-start
