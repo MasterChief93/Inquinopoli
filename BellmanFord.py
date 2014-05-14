@@ -158,7 +158,7 @@ def Dfs(G, arr):
 #print bellmanford2()
 
 
-def Bel3(G, list):  # TODO inserire query
+def Bel3(G, list):
     #Generatore()
     qcity = dict()
 

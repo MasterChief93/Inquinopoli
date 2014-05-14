@@ -1,9 +1,10 @@
 __author__ = 'Fabrizio' # generatore definitivo !
 
 from random import randrange,seed,sample
-from time import clock,time
+from time import time
 
-def Generatore(): # TODO troppo lento, da migliorare
+
+def Generatore():
     file=open("input2.txt","w")
     test= randrange(1,50)
     file.write(str(test)+"\n\n")

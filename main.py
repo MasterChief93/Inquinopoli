@@ -2,9 +2,10 @@
 #import networkx as nx
 #import matplotlib.pyplot as plt
 #from PriorityDijkstra import dijkstra2,dijkstra
-import BellmanFord
-from generatore2 import Generatore
 from time import time           #from graph_tool.all import *
+
+import BellmanFord
+
 
 class City:
     def __init__(self,value,peso):
@@ -154,8 +155,10 @@ def lettura(file):
     #exit(Total)
     #return total
 
-start = time()
-file = open('input2.txt','r')
-main(file)
-end = time()
-print end-start
+
+if __name__ == "__main__":
+    start = time()
+    file = open('input2.txt', 'r')
+    main(file)
+    end = time()
+    print end - start
