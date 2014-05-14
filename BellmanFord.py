@@ -209,4 +209,5 @@ def Bel3(G, list):  # TODO inserire query
                 qcity[elem.arr] = 0
 
     for elem in qcity:
-        print elem , qcity[elem]
+        #print "Nodo: " + str(elem) + " --> Costo: " + str(qcity[elem])
+        print qcity[elem]  if qcity[elem] >= 0 and qcity[elem] != float("+inf") else "?"

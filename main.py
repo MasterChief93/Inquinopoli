@@ -122,7 +122,9 @@ def main(file):
 
         #print G.streets[6]
         #dijkstra2(G,1,7)
+        print "\nCaso " + str(i+1) + ":"
         BellmanFord.Bel3(G,result[i][3])
+        #BellmanFord.Bel3(G,result[i][3])
         #nx.draw(Gr)
         #plt.savefig("path.png")
 
