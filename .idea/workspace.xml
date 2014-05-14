@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="418f56e1-391c-4895-a7b9-f5acd410d691" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GUI.py" />
+    <list default="true" id="418f56e1-391c-4895-a7b9-f5acd410d691" name="Default" comment="Generatore UBBAVELOCE">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BellmanFord.py" afterPath="$PROJECT_DIR$/BellmanFord.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Inquinopoli.iml" afterPath="$PROJECT_DIR$/.idea/Inquinopoli.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generatore2.py" afterPath="$PROJECT_DIR$/generatore2.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input2.txt" afterPath="$PROJECT_DIR$/input2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GUI.py" afterPath="$PROJECT_DIR$/GUI.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -34,8 +31,10 @@
       <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="22" selection-start="684" selection-end="684" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2805">
-              <folding />
+            <state line="123" column="27" selection-start="6136" selection-end="6136" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="2805">
+              <folding>
+                <element signature="e#129#190#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -43,7 +42,7 @@
       <file leaf-file-name="BellmanFord.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BellmanFord.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="165" column="26" selection-start="4802" selection-end="4802" vertical-scroll-proportion="0.0" vertical-offset="2852" max-vertical-offset="3723">
+            <state line="42" column="32" selection-start="1375" selection-end="1375" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
               <folding />
             </state>
           </provider>
@@ -52,16 +51,16 @@
       <file leaf-file-name="input2.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/input2.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8949769">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="8949769">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="generatore2.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="generatore2.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/generatore2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="17" selection-start="138" selection-end="138" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
+            <state line="39" column="13" selection-start="1116" selection-end="1116" vertical-scroll-proportion="2.1881187" vertical-offset="0" max-vertical-offset="816">
               <folding>
                 <element signature="e#51#91#0" expanded="true" />
               </folding>
@@ -69,10 +68,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GUI.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GUI.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
+            <state line="7" column="4" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="1037">
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -102,6 +101,7 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/GUI.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/input.txt" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BellmanFord.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/generatore2.py" root0="SKIP_INSPECTION" />
@@ -124,10 +124,11 @@
         <option value="$PROJECT_DIR$/qrwer.py" />
         <option value="$PROJECT_DIR$/Generatore.py" />
         <option value="$PROJECT_DIR$/input2" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/generatore2.py" />
-        <option value="$PROJECT_DIR$/BellmanFord.py" />
         <option value="$PROJECT_DIR$/input2.txt" />
+        <option value="$PROJECT_DIR$/GUI.py" />
+        <option value="$PROJECT_DIR$/BellmanFord.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -586,7 +587,11 @@
       <created>1400058929693</created>
       <updated>1400058929693</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Generatore UBBAVELOCE">
+      <created>1400059536354</created>
+      <updated>1400059536354</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -613,6 +618,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15280136" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282572" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -621,13 +627,12 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39763114" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21731749" sideWeight="0.50111526" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43824026" sideWeight="0.49888477" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43972835" sideWeight="0.49888477" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34465197" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282572" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -685,6 +690,8 @@
     <MESSAGE value="Bellman Ford, troppo bello per essere vero&#10;infatti un problema c'era&#10;work in progress" />
     <MESSAGE value="Generatore UBBAVELOCE" />
     <option name="LAST_COMMIT_MESSAGE" value="Generatore UBBAVELOCE" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -695,7 +702,9 @@
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="133" column="13" selection-start="6447" selection-end="6447" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2839">
-          <folding />
+          <folding>
+            <element signature="e#129#190#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -782,18 +791,18 @@
         <state line="317" column="0" selection-start="12374" selection-end="12374" vertical-scroll-proportion="0.0" vertical-offset="11070" max-vertical-offset="15351" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generatore2.py">
+    <entry file="file://$PROJECT_DIR$/GUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="138" selection-end="138" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
+        <state line="7" column="4" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="1037">
           <folding>
-            <element signature="e#51#91#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/BellmanFord.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="22" selection-start="684" selection-end="684" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2805">
+        <state line="42" column="32" selection-start="1375" selection-end="1375" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
           <folding />
         </state>
       </provider>
@@ -805,18 +814,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BellmanFord.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="165" column="26" selection-start="4802" selection-end="4802" vertical-scroll-proportion="0.0" vertical-offset="2852" max-vertical-offset="3723">
-          <folding />
+        <state line="123" column="27" selection-start="6136" selection-end="6136" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="2805">
+          <folding>
+            <element signature="e#129#190#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUI.py">
+    <entry file="file://$PROJECT_DIR$/generatore2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
+        <state line="39" column="13" selection-start="1116" selection-end="1116" vertical-scroll-proportion="2.1881187" vertical-offset="0" max-vertical-offset="816">
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#51#91#0" expanded="true" />
           </folding>
         </state>
       </provider>
