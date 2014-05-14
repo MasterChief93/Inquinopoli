@@ -30,7 +30,7 @@ def Generatore():
         file.write(str(q)+"\n")
         qlist=[]
         while len(qlist) < q:
-            qn=randrange(1,n)
+            qn = randrange(2, n)
             if qn not in qlist:
                 file.write(str(qn)+"\n")
                 qlist.append(qn)

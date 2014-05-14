@@ -109,6 +109,7 @@ class Grafo:
 
 def main(file):
     result = lettura(file)#Generatore()
+
     for i in range(0,len(result)):
         G = Grafo()
         #Gr = nx.DiGraph()

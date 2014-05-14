@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="418f56e1-391c-4895-a7b9-f5acd410d691" name="Default" comment="Generatore UBBAVELOCE">
+    <list default="true" id="418f56e1-391c-4895-a7b9-f5acd410d691" name="Default" comment="Rimozione vecchi commenti e aggiunti di nuovi">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BellmanFord.py" afterPath="$PROJECT_DIR$/BellmanFord.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GUI.py" afterPath="$PROJECT_DIR$/GUI.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generatore2.py" afterPath="$PROJECT_DIR$/generatore2.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input2.txt" afterPath="$PROJECT_DIR$/input2.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -31,7 +32,7 @@
       <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="123" column="27" selection-start="6136" selection-end="6136" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="2805">
+            <state line="15" column="13" selection-start="591" selection-end="591" vertical-scroll-proportion="0.0" vertical-offset="1530" max-vertical-offset="2822">
               <folding>
                 <element signature="e#129#190#0" expanded="true" />
               </folding>
@@ -39,10 +40,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BellmanFord.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="BellmanFord.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BellmanFord.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="32" selection-start="1375" selection-end="1375" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
+            <state line="49" column="18" selection-start="1659" selection-end="1659" vertical-scroll-proportion="0.38283828" vertical-offset="717" max-vertical-offset="1037">
               <folding />
             </state>
           </provider>
@@ -51,16 +52,16 @@
       <file leaf-file-name="input2.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/input2.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="8949769">
+            <state line="65700" column="1" selection-start="412956" selection-end="412956" vertical-scroll-proportion="-44676.0" vertical-offset="0" max-vertical-offset="4986406">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="generatore2.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="generatore2.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/generatore2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="13" selection-start="1116" selection-end="1116" vertical-scroll-proportion="2.1881187" vertical-offset="0" max-vertical-offset="816">
+            <state line="32" column="26" selection-start="950" selection-end="950" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="816">
               <folding>
                 <element signature="e#51#91#0" expanded="true" />
               </folding>
@@ -71,7 +72,7 @@
       <file leaf-file-name="GUI.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="4" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="1037">
+            <state line="7" column="4" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -124,11 +125,11 @@
         <option value="$PROJECT_DIR$/qrwer.py" />
         <option value="$PROJECT_DIR$/Generatore.py" />
         <option value="$PROJECT_DIR$/input2" />
-        <option value="$PROJECT_DIR$/generatore2.py" />
-        <option value="$PROJECT_DIR$/input2.txt" />
         <option value="$PROJECT_DIR$/GUI.py" />
-        <option value="$PROJECT_DIR$/BellmanFord.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/input2.txt" />
+        <option value="$PROJECT_DIR$/generatore2.py" />
+        <option value="$PROJECT_DIR$/BellmanFord.py" />
       </list>
     </option>
   </component>
@@ -197,6 +198,22 @@
     <property name="LayoutCode.rearrangeEntriesPython" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="157" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="157" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="157" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="831" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="161" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="150" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="156" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="835" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -591,7 +608,11 @@
       <created>1400059536354</created>
       <updated>1400059536354</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Rimozione vecchi commenti e aggiunti di nuovi">
+      <created>1400060058819</created>
+      <updated>1400060058819</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -627,7 +648,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39763114" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21731749" sideWeight="0.50111526" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43972835" sideWeight="0.49888477" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43972835" sideWeight="0.49888477" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34465197" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -689,7 +710,8 @@
     <MESSAGE value="Bellman Ford, troppo bello per essere vero" />
     <MESSAGE value="Bellman Ford, troppo bello per essere vero&#10;infatti un problema c'era&#10;work in progress" />
     <MESSAGE value="Generatore UBBAVELOCE" />
-    <option name="LAST_COMMIT_MESSAGE" value="Generatore UBBAVELOCE" />
+    <MESSAGE value="Rimozione vecchi commenti e aggiunti di nuovi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rimozione vecchi commenti e aggiunti di nuovi" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -800,35 +822,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BellmanFord.py">
+    <entry file="file://$PROJECT_DIR$/generatore2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="32" selection-start="1375" selection-end="1375" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
-          <folding />
+        <state line="32" column="26" selection-start="950" selection-end="950" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="816">
+          <folding>
+            <element signature="e#51#91#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/input2.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+        <state line="65700" column="1" selection-start="412956" selection-end="412956" vertical-scroll-proportion="-44676.0" vertical-offset="0" max-vertical-offset="4986406">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="27" selection-start="6136" selection-end="6136" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="2805">
+        <state line="15" column="13" selection-start="591" selection-end="591" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="2822">
           <folding>
             <element signature="e#129#190#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generatore2.py">
+    <entry file="file://$PROJECT_DIR$/BellmanFord.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="13" selection-start="1116" selection-end="1116" vertical-scroll-proportion="2.1881187" vertical-offset="0" max-vertical-offset="816">
-          <folding>
-            <element signature="e#51#91#0" expanded="true" />
-          </folding>
+        <state line="49" column="18" selection-start="1659" selection-end="1659" vertical-scroll-proportion="0.38283828" vertical-offset="717" max-vertical-offset="1037">
+          <folding />
         </state>
       </provider>
     </entry>
