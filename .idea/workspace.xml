@@ -1,44 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="418f56e1-391c-4895-a7b9-f5acd410d691" name="Default" comment="Rimozione vecchi commenti e aggiunti di nuovi">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BellmanFord.py" afterPath="$PROJECT_DIR$/BellmanFord.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/linked_ds/list/DoubleLinkedList.py" afterPath="$PROJECT_DIR$/linked_ds/list/DoubleLinkedList.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generatore.py" afterPath="$PROJECT_DIR$/Generatore.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Inquinopoli.iml" afterPath="$PROJECT_DIR$/.idea/Inquinopoli.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/linked_ds/list/LinkedList.py" afterPath="$PROJECT_DIR$/linked_ds/list/LinkedList.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Monete.py" afterPath="$PROJECT_DIR$/Monete.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priorityQueue/PQ_Dheap.py" afterPath="$PROJECT_DIR$/priorityQueue/PQ_Dheap.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priorityQueue/PQbinaryHeap.py" afterPath="$PROJECT_DIR$/priorityQueue/PQbinaryHeap.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PQbinomialHeap.py" afterPath="$PROJECT_DIR$/PQbinomialHeap.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PriorityDijkstra.py" afterPath="$PROJECT_DIR$/PriorityDijkstra.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priorityQueue/PriorityQueueDemo.py" afterPath="$PROJECT_DIR$/priorityQueue/PriorityQueueDemo.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/linked_ds/queue/Queue.py" afterPath="$PROJECT_DIR$/linked_ds/queue/Queue.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/linked_ds/stack/Stack.py" afterPath="$PROJECT_DIR$/linked_ds/stack/Stack.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/linked_ds/queue/demoCode.py" afterPath="$PROJECT_DIR$/linked_ds/queue/demoCode.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/linked_ds/list/demoListe.py" afterPath="$PROJECT_DIR$/linked_ds/list/demoListe.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/linked_ds/stack/demoPile.py" afterPath="$PROJECT_DIR$/linked_ds/stack/demoPile.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/linked_ds/.idea/encodings.xml" afterPath="$PROJECT_DIR$/linked_ds/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priorityQueue/.idea/encodings.xml" afterPath="$PROJECT_DIR$/priorityQueue/.idea/encodings.xml" />
+    <list default="true" id="418f56e1-391c-4895-a7b9-f5acd410d691" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generatore2.py" afterPath="$PROJECT_DIR$/generatore2.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generatore" afterPath="$PROJECT_DIR$/generatore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input2.txt" afterPath="$PROJECT_DIR$/input2.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/linked_ds/.idea/linked_ds.iml" afterPath="$PROJECT_DIR$/linked_ds/.idea/linked_ds.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/linked_ds/.idea/misc.xml" afterPath="$PROJECT_DIR$/linked_ds/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priorityQueue/.idea/misc.xml" afterPath="$PROJECT_DIR$/priorityQueue/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/linked_ds/.idea/modules.xml" afterPath="$PROJECT_DIR$/linked_ds/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priorityQueue/.idea/modules.xml" afterPath="$PROJECT_DIR$/priorityQueue/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priorityQueue/.idea/priorityQueue.iml" afterPath="$PROJECT_DIR$/priorityQueue/.idea/priorityQueue.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/linked_ds/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/linked_ds/.idea/scopes/scope_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priorityQueue/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/priorityQueue/.idea/scopes/scope_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/linked_ds/trees/treeArrayList.py" afterPath="$PROJECT_DIR$/linked_ds/trees/treeArrayList.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/linked_ds/.idea/vcs.xml" afterPath="$PROJECT_DIR$/linked_ds/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priorityQueue/.idea/vcs.xml" afterPath="$PROJECT_DIR$/priorityQueue/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/linked_ds/.idea/workspace.xml" afterPath="$PROJECT_DIR$/linked_ds/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/priorityQueue/.idea/workspace.xml" afterPath="$PROJECT_DIR$/priorityQueue/.idea/workspace.xml" />
     </list>
     <ignored path="Inquinopoli.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,7 +30,7 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="4" selection-start="4057" selection-end="4057" vertical-scroll-proportion="0.6123778" vertical-offset="832" max-vertical-offset="1870">
+            <state line="15" column="7" selection-start="703" selection-end="703" vertical-scroll-proportion="-3.3982558" vertical-offset="1424" max-vertical-offset="1955">
               <folding>
                 <element signature="e#129#217#0" expanded="true" />
               </folding>
@@ -75,7 +41,7 @@
       <file leaf-file-name="BellmanFord.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BellmanFord.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="0" selection-start="1906" selection-end="1906" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1071">
+            <state line="42" column="21" selection-start="1265" selection-end="1265" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071">
               <folding />
             </state>
           </provider>
@@ -93,7 +59,7 @@
       <file leaf-file-name="generatore2.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/generatore2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="1" selection-start="1193" selection-end="1193" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1088">
               <folding>
                 <element signature="e#51#93#0" expanded="true" />
               </folding>
@@ -157,9 +123,9 @@
         <option value="$PROJECT_DIR$/input2" />
         <option value="$PROJECT_DIR$/GUI.py" />
         <option value="$PROJECT_DIR$/input2.txt" />
-        <option value="$PROJECT_DIR$/generatore2.py" />
         <option value="$PROJECT_DIR$/BellmanFord.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/generatore2.py" />
       </list>
     </option>
   </component>
@@ -620,10 +586,14 @@
       <created>1400060058819</created>
       <updated>1400060058819</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="- Aggiunti primi commenti al codice, da finire&#10;- rimozione useless production ( righe inutili) (pettorossi)">
+      <created>1400490416791</created>
+      <updated>1400490416791</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
-  <component name="TodoView" selected-index="0">
+  <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
       <are-packages-shown value="false" />
       <are-modules-shown value="false" />
@@ -645,23 +615,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="1" width="1365" height="726" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15280136" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282572" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32807016" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32807016" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24981412" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295626" sideWeight="0.5629371" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39763114" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21731749" sideWeight="0.50111526" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39298245" sideWeight="0.49888477" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20175439" sideWeight="0.49888477" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34465197" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -699,9 +669,9 @@
     <MESSAGE value="Bellman Ford, troppo bello per essere vero&#10;infatti un problema c'era&#10;work in progress" />
     <MESSAGE value="Generatore UBBAVELOCE" />
     <MESSAGE value="Rimozione vecchi commenti e aggiunti di nuovi" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rimozione vecchi commenti e aggiunti di nuovi" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="- Aggiunti primi commenti al codice, da finire&#10;- rimozione useless production ( righe inutili) (pettorossi)" />
+    <MESSAGE value="- Aggiunti primi commenti al codice, da finire&#10;- rimozione useless production ( righe inutili) (pettorossi)&#10;&#10;L'ALGORITMO DI BELLMANFORD è SBAGLIATO, DA CORREGERE" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Aggiunti primi commenti al codice, da finire&#10;- rimozione useless production ( righe inutili) (pettorossi)&#10;&#10;L'ALGORITMO DI BELLMANFORD è SBAGLIATO, DA CORREGERE" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -764,19 +734,19 @@
         <state line="216" column="0" selection-start="8185" selection-end="8185" vertical-scroll-proportion="0.0" vertical-offset="3455" max-vertical-offset="15351" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generatore2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="1" selection-start="1193" selection-end="1193" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
-          <folding>
-            <element signature="e#51#93#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GUI.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="4" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="1037">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generatore2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1088">
+          <folding>
+            <element signature="e#51#93#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -789,14 +759,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BellmanFord.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="0" selection-start="1906" selection-end="1906" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1071">
+        <state line="42" column="21" selection-start="1265" selection-end="1265" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="4" selection-start="4057" selection-end="4057" vertical-scroll-proportion="0.6123778" vertical-offset="832" max-vertical-offset="1870">
+        <state line="15" column="7" selection-start="703" selection-end="703" vertical-scroll-proportion="-3.3982558" vertical-offset="1424" max-vertical-offset="1955">
           <folding>
             <element signature="e#129#217#0" expanded="true" />
           </folding>

@@ -7,20 +7,20 @@ from time import time           # Importazione libreria time per la misurazione 
 import BellmanFord              # Importazione file BellmanFord.py sul quale è presente l'algoritmo risolutivo del grafo
 
 
-class Node:                     # Inizializione classe Node
+class Node:                     # Inizializzazione classe Node
     def __init__(self, value, weight):       # Definizione attributi e variabili formali
         self.value = value                   # value indica l'indice del nodo
         self.weight = weight                 # weight indica la concentrazione media di polveri sottili presenti nel nodo
 
 
-class Arc:                     # Inizializazione classe Arc
+class Arc:                     # Inizializzazione classe Arc
     def __init__(self, dep, arr, weight):           # Definizione attributi e variabili formali
         self.dep = dep                              # dep, departure, indica il nodo di partenza dell'arco
         self.arr = arr                              # arr, arrival, indica il nodo di arrivo dell'arco
         self.weight = weight                        # weight indica il costo di percorrenza dell'arco
 
 
-class Graph:                  # Inizializzazione classe Graph
+class Graph:                   # Inizializzazione classe Graph
     def __init__(self):                    # Definizione attributi di Graph
         self.nodes = None                  # self.nodes conterrà tutti i nodi di Graph
         self.arcs = None                   # self.arcs conterrà tutti gli archi di Graph
@@ -58,29 +58,33 @@ class Graph:                  # Inizializzazione classe Graph
 
 def main(file):
     """
-
-    @param file:
+    Funzione principale del programma : provvede alla chiamata della funzoine reading per la letture del file,
+    crea un grafo per ogni caso di test (aggiungendo nodi ed archi allo stesso) per poi invocare la funzione BellmanFord
+    per la risoluzione del caso di test
+    @param file: fileobject; tipo di dato file con indirizzo relativo alla posizione del file di input
     """
     result = reading(file)
 
-    for i in range(0, len(result)):
+    for i in range(0, len(result)):         # Inizializzazione del grafo G come elemento della classe Graph per ogni caso di test
         G = Graph()
-        for j in range(len(result[i][1])):
+        for j in range(len(result[i][1])):  #TODO commentare
             G.insertNode(j + 1, result[i][1][j])
 
-        for elem in result[i][2]:
+        for elem in result[i][2]:            #TODO commentare
             G.insertArc(int(elem[0]), int(elem[1]))
         print "\nCaso " + str(i + 1) + ":"
-        BellmanFord.BellmanFord(G, result[i][3])
+        BellmanFord.BellmanFord(G, result[i][3]) #TODO commentare
 
 
-def reading(file):
+def reading(file): #TODO finire di commentare
+
     x = file.readlines()
-    Total = []
-    numbcase = x[0]
-    i = 1
-    while i < len(x) - 1:
-        if x[i] == "\n":
+    Total = []           # Creazione della lista Total
+    numbcase = x[0]      # Assegnazione di variabile : alla variabile "numbcase" viene assegnato il valore di x[0] il quale, per com'è costruito il file di input, indica sempre il numero di test da effettuare
+    i = 1                # Assegnazione di variabile : la variabile "i" viene assegnato il valore 1. La variabile i servirà nel cilo while successivo per determinare quando si sarà letto tutto il file
+    while i < len(x) - 1: # Ciclo che legge tutto il file, basandosi sul contatore i
+        if x[i] == "\n":  # Se x[i] == "\n" allora alla riga successiva inizierà un nuovo caso
+
             numbnode = x[i + 1].strip()
             pm20list = x[i + 2].strip().split(' ')
             numbarc = x[i + 3].strip()
@@ -93,6 +97,7 @@ def reading(file):
                 query.append(int(x[j].strip()))
             case = [numbnode, pm20list, arcs, query]
             Total.append(case)
+
         i = len_arcs + int(x[len_arcs]) + 1
     return Total
 
