@@ -64,11 +64,11 @@ def main(file):
     @param file: fileobject; tipo di dato file con indirizzo relativo alla posizione del file di input
     """
     result = reading(file)
-
+    print result
     for i in range(0, len(result)):         # Inizializzazione del grafo G come elemento della classe Graph per ogni caso di test
         G = Graph()
-        for j in range(len(result[i][1])):  #TODO commentare
-            G.insertNode(j + 1, result[i][1][j])
+        for j in range(len(result[i][1])):  # Per ogni caso di test l'elemento 1 contiene tutti i valore di pm20 dei nodi
+            G.insertNode(j + 1, result[i][1][j])  # Questi perciò saranno aggiunti con indici pari a j + 1 (da 1 a n) e peso pari al pm20 letto
 
         for elem in result[i][2]:            #TODO commentare
             G.insertArc(int(elem[0]), int(elem[1]))
