@@ -2,154 +2,98 @@
 #import networkx as nx
 #import matplotlib.pyplot as plt
 #from PriorityDijkstra import dijkstra2,dijkstra
-from time import time           #from graph_tool.all import *
+from time import time           # Importazione libreria time per la misurazione il tempo
 
-import BellmanFord
+import BellmanFord              # Importazione file BellmanFord.py sul quale è presente l'algoritmo risolutivo del grafo
 
 
-class City:
-    def __init__(self,value,peso):
-        self.value = value                   #Inizializzazione della classe città:
-        self.peso = peso                     #ognuna contiene valore (numero della città)
-        #self.frow = []                      #peso (PM20) e lista delle città dalle quali si può giungere a questa (probabilmente da rimuove!!)
+class Node:                     # Inizializione classe Node
+    def __init__(self, value, weight):       # Definizione attributi e variabili formali
+        self.value = value                   # value indica l'indice del nodo
+        self.weight = weight                 # weight indica la concentrazione media di polveri sottili presenti nel nodo
 
-class Street:
-    def __init__(self,par,arr,peso):
-        self.par = par
-        self.arr = arr
-        self.peso = peso
 
-class Grafo:
-    def __init__(self):
-        self.cities = None                  #Inizializzazione del grafo: dizionario delle città e array delle strade
-        self.streets = None
+class Arc:                     # Inizializazione classe Arc
+    def __init__(self, dep, arr, weight):           # Definizione attributi e variabili formali
+        self.dep = dep                              # dep, departure, indica il nodo di partenza dell'arco
+        self.arr = arr                              # arr, arrival, indica il nodo di arrivo dell'arco
+        self.weight = weight                        # weight indica il costo di percorrenza dell'arco
 
-    def insertCity(self,value,peso):
-        newCity = City(value,peso)          #Creazione di un elemento di classe città
-        if self.cities == None:             #Se non sono state MAI aggiunte città allora inizializzo il dizionario con la nuova città
-            self.cities = {value: newCity}
+
+class Graph:                  # Inizializzazione classe Graph
+    def __init__(self):                    # Definizione attributi di Graph
+        self.nodes = None                  # self.nodes conterrà tutti i nodi di Graph
+        self.arcs = None                   # self.arcs conterrà tutti gli archi di Graph
+
+    def insertNode(self, value, weight):
+        """
+        Il metodo insertNode inserisce un nodo in Graph con i relativi attributi
+        @param value: int; indice del nodo (corrisponderà all'attributo value della classe Node)
+        @param weight: int; concentrazione media di polveri sottili presenti nel nodo (corrisponderà all'attributo weight della classe Node)
+        @return: newNode: Node instance; istanza della classe Node di attributi "value" e "weight"
+        """
+        newNode = Node(value, weight)          # Creazione di un elemento di classe Node
+        if self.nodes == None:             # Se non sono state MAI aggiunti nodi allora inizializzo il dizionario con il nuovo nodo
+            self.nodes = {value: newNode}
         else:
-            self.cities[value] = newCity    #Altrimenti metto la nuova città nella posizione value ------>
-        return newCity                      #------> Vantaggio dei dizionari = Se l'elemento di nome/posizione value non esiste allora lo crea da solo
+            self.nodes[value] = newNode    # Altrimenti inserisco il nuovo nodo nella posizione "value" ------>
+        return newNode                      # ------> Vantaggio dei dizionari : se l'elemento di nome/posizione value non esiste allora lo crea da solo
 
-    def insertStreet(self,par,arr):
-        if par in self.cities and arr in self.cities:
-            peso = (int(self.cities[arr].peso) - int(self.cities[par].peso))**3                                                    #Innanzitutto devo esistere entrambe le città per poter essere creata la strada
-            if self.streets == None:                                    #Se non ci sono strade allora inizializzo la lista di liste delle strade
-                self.streets = {par: [Street(par,arr,peso)]}            #par.value e arr.value
-            else:                                                       #altrimenti appendo semplicemente la nuova strada
-                if par in self.streets:
-                    self.streets[par].append(Street(par,arr,peso))
+    def insertArc(self, dep, arr):
+        """
+        Il metodo insertArc inserisce un nuovo arco in Graph (lo aggiunge al dizionario self.arcs)
+        @param dep: int; indice del nodo di partenza dell'arco (attributo "dep" della classe Arch)
+        @param arr: int; indice del nodo di arrivo dell'arco   (attributo "arr" della classe Arch)
+        """
+        if dep in self.nodes and arr in self.nodes:                 # Controllo atto a verificare la presenza dei nodi corrispondenti agli indici dep ed arr nel dizionario self.nodes
+            weight = (int(self.nodes[arr].weight) - int(self.nodes[dep].weight)) ** 3   # Calcolo peso dell'arco basato sull'attributo "weight" dei nodi
+            if self.arcs == None:                                    # Se non ci sono strade allora inizializzo un dizionario di liste delle strade
+                self.arcs = {dep: [Arc(dep, arr, weight)]}           # ogni elemento avrà come chiave l'indice del nodo di partenza e come valore la lista di archi uscenti da tale nodo
+            else:
+                if dep in self.arcs:                                 # Se il dizionario non è vuoto verrà inserita una nuova coppia chiave-valore
+                    self.arcs[dep].append(Arc(dep, arr, weight))     # se il nodo di partenza era già presente nel dizionario, aggiungerò il nuovo arco alla sua lista di archi uscenti
                 else:
-                    self.streets[par] = [Street(par,arr,peso)]          #idem
-
-    def deleteStreet(self,par,arr):
-        if [par.value,arr.value] in self.streets:           #La strada innanzitutto deve essere nella lista delle strade
-            self.streets.remove([par.value,arr.value])      #Uso il comando "remove" per trovare ed eliminare automaticamente l'elemento
-            arr.frow.remove(par.value)                      #Rimuovo inoltre la città di partenza dalla lista "frow" della città di arrivo
-            print self.streets                              #Print tanto per...
-            print arr.frow
-
-    def visit(self,root):#visita generica
-        state = dict()                      #inizializzo un dizionario per tener conto delle città visitate
-        state[root] = 1                     #la radice viene visitata
-        Explored = []                       #Mantengo la lista degli elementi visitati
-        s = set()                           #Il set è una semplice lista alla fine...
-        s.add(root)                         #Aggiungo la radice al set
-        while len(s) > 0:                   #finché non lo svuoto
-            now = s.pop()                   #poppo il primo elemento
-            state[now] == 1                 #dico che l'ho visitato
-            Explored.append(now)            #e lo metto tra gli esplorati
-            for elem in self.streets:
-                if elem == now:                                #per tutte le strade che partono dall'elemento poppato
-                    new = elem[1]                              #prendo la città di arrivo
-                    if not new in state or state[now] == 1:    #se non è già stata visitata
-                        state[new] = 0                         #la imposto come vista
-                        s.add(new)                             #e la aggiungo al set
-        print Explored
-
-    def visitDFS(self,root):
-        state = dict()                      #stesso funzionamento della visita generica
-        state[root] = 1                     #ma al posto del set uso una lista e invece dell'add uso un insert alla posizione 0
-        Explored = []
-        s = []
-        s.insert(0,root)
-        while len(s) > 0:
-            now = s.pop(0)              #e il pop del primo elemento. è semplicemente una pila
-            state[now] == 1
-            Explored.append(now)
-            print self.streets
-            for elem in self.streets:
-                if self.streets[elem] == now:
-                    new = elem[1]
-                    if not new in state or state[now] == 1:
-                        state[new] = 0
-                        s.insert(0,new)
-        print Explored
-
-    def visitBFS(self,root):
-        state = dict()                  #stessa cosa dei precedenti. Uso s come una lista
-        state[root] = 1
-        Explored = []
-        s = []
-        s.append(root)            #invece dell'insert uso un append
-        while len(s) > 0:
-            now = s.pop(0)              #e il pop del primo elemento. Esattamente come una coda
-            state[now] == 1
-            Explored.append(now)
-            for elem in self.streets:
-                if elem[0] == now:
-                    new = elem[1]
-                    if not new in state or state[now] == 1:
-                        state[new] = 0
-                        s.append(new)
-        print Explored
-
+                    self.arcs[dep] = [Arc(dep, arr, weight)]          # altrimenti verrà inserita una nuova coppia chiave-valore
 
 
 def main(file):
-    result = lettura(file)#Generatore()
+    """
 
-    for i in range(0,len(result)):
-        G = Grafo()
-        #Gr = nx.DiGraph()
-              #E' il secondo esempio del file input nel progetto
+    @param file:
+    """
+    result = reading(file)
+
+    for i in range(0, len(result)):
+        G = Graph()
         for j in range(len(result[i][1])):
-            G.insertCity(j+1,result[i][1][j])
-            #Gr.add_node(i+1)
+            G.insertNode(j + 1, result[i][1][j])
 
         for elem in result[i][2]:
-            G.insertStreet(int(elem[0]),int(elem[1]))
-            #Gr.add_edge(int(elem[0]),int(elem[1]))
-
-        #print G.streets[6]
-        #dijkstra2(G,1,7)
-        print "\nCaso " + str(i+1) + ":"
+            G.insertArc(int(elem[0]), int(elem[1]))
+        print "\nCaso " + str(i + 1) + ":"
         BellmanFord.BellmanFord(G, result[i][3])
-        #BellmanFord.Bel3(G,result[i][3])
-        #nx.draw(Gr)
-        #plt.savefig("path.png")
 
-def lettura(file):
+
+def reading(file):
     x = file.readlines()
     Total = []
     numbcase = x[0]
     i = 1
     while i < len(x) - 1:
         if x[i] == "\n":
-            numbnode = x[i+1].strip()
-            pm20list = x[i+2].strip().split(' ')
-            numbarch = x[i+3].strip()
-            archi = []
-            len_archi = i + 3 + int(numbarch) + 1
-            for j in range(i + 4 , len_archi):
-                archi.append(x[j].strip().split(' '))
+            numbnode = x[i + 1].strip()
+            pm20list = x[i + 2].strip().split(' ')
+            numbarc = x[i + 3].strip()
+            arcs = []
+            len_arcs = i + 3 + int(numbarc) + 1
+            for j in range(i + 4, len_arcs):
+                arcs.append(x[j].strip().split(' '))
             query = []
-            for j in range(len_archi + 1 , len_archi + int(x[len_archi]) + 1):
+            for j in range(len_arcs + 1, len_arcs + int(x[len_arcs]) + 1):
                 query.append(int(x[j].strip()))
-            case = [numbnode,pm20list,archi,query]
+            case = [numbnode, pm20list, arcs, query]
             Total.append(case)
-        i = len_archi + int(x[len_archi]) + 1
+        i = len_arcs + int(x[len_arcs]) + 1
     return Total
 
 

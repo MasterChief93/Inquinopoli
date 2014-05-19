@@ -1,6 +1,7 @@
 from linked_ds.list.LinkedList import ListaCollegata
 from linked_ds.queue.Queue import CodaArrayList_deque as queue
 
+
 class BinomialHeapNode:
     def __init__(self, e, k):
         self.elem = e
@@ -16,6 +17,7 @@ class BinomialHeapNode:
         son.father = self
         self.sons.addAsLast(son)
 
+
 class BinomialHeap:
     def __init__(self, e, k):
         self.root = BinomialHeapNode(e, k)
@@ -23,7 +25,7 @@ class BinomialHeap:
     def merge(self, otherHeap):
         thisRoot = self.root
         otherRoot = otherHeap.root
-        
+
         if thisRoot.key <= otherRoot.key:
             otherRoot.father = thisRoot
             thisRoot.addSon(otherRoot)
@@ -43,7 +45,7 @@ class BinomialHeap:
             res.addAsLast(nHeap)
             curr = curr.next
         return res
-    
+
     def stampa(self):
         # bfs
         q = queue()
@@ -57,14 +59,16 @@ class BinomialHeap:
                     q.enqueue((curr.key, f.elem))
                     f = f.next
 
+
 class PQbinomialHeap:
     maxSize = 32
+
     def __init__(self):
         # Memorizziamo fino a B31 (e' gia' abbastanza grande!)
         # E' una lista di liste: transitoriamente e' possibile avere fino a 3 heap dello stesso tipo
         self.heap = PQbinomialHeap.maxSize * [None]
         for i in range(len(self.heap)):
-            self.heap[i]=[None, None, None]
+            self.heap[i] = [None, None, None]
 
 
     # Assume che se heap[i][j]==None, allora anche heap[i][j+1]==None
@@ -72,7 +76,7 @@ class PQbinomialHeap:
         for i in range(len(self.heap)):
             if self.heap[i][1] == None and self.heap[i][2] == None:
                 continue
-            
+
             if self.heap[i][1] != None and self.heap[i][2] != None:  # merge the last 2
                 merged = self.heap[i][1].merge(self.heap[i][2])
                 self.heap[i][1] = None
@@ -81,7 +85,7 @@ class PQbinomialHeap:
                 merged = self.heap[i][0].merge(self.heap[i][1])
                 self.heap[i][0] = None
                 self.heap[i][1] = None
-    
+
             if self.heap[i + 1][0] == None:
                 self.heap[i + 1][0] = merged
             elif self.heap[i + 1][1] == None:
@@ -110,16 +114,16 @@ class PQbinomialHeap:
     def findMinIndex(self):
         if self.isEmpty():
             return -1
-        # find first non empty position
+            # find first non empty position
         for besti in range(PQbinomialHeap.maxSize):
             if self.heap[besti][0] != None:
                 break
-        # find best index
+            # find best index
         for i in range(besti + 1, PQbinomialHeap.maxSize):
             if self.heap[i][0] != None and self.heap[i][0].root.key < self.heap[besti][0].root.key:
                 besti = i
         return besti
-    
+
     def findMin(self):
         if self.isEmpty():
             return None
@@ -143,59 +147,59 @@ class PQbinomialHeap:
             count += 1
             curr = curr.next
         self.rebuild()
-    
+
     def stampa(self):
         for i in range(len(self.heap)):
             if self.heap[i][0] is not None:
                 print "B_" + str(i)
                 self.heap[i][0].stampa()
-            
-            
+
+
 if __name__ == "__main__":
     pq = PQbinomialHeap()
     if pq.isEmpty():
         print "Empty queue"
-    
+
     e = 4.0
     k = 2.0
     print "insert({},{})".format(e, k)
     pq.insert(e, k)
     pq.stampa()
     print "findMin():", pq.findMin()
-    
+
     e = 2.0
     k = 1.0
     print "insert({},{})".format(e, k)
     pq.insert(e, k)
     pq.stampa()
     print "findMin():", pq.findMin()
-    
+
     e = 8.0
     k = 4.0
     print "insert({},{})".format(e, k)
     pq.insert(e, k)
     pq.stampa()
     print "findMin():", pq.findMin()
-    
+
     e = 10.0
     k = 5.0
     print "insert({},{})".format(e, k)
     pq.insert(e, k)
     pq.stampa()
     print "findMin():", pq.findMin()
-    
+
     e = 6.0
     k = 3.0
     print "insert({},{})".format(e, k)
     pq.insert(e, k)
     pq.stampa()
     print "findMin():", pq.findMin()
-    
+
     print "deleteMin()"
     pq.deleteMin()
     pq.stampa()
     print "findMin():", pq.findMin()
-    
+
     e = 12.0
     k = 6.0
     print "insert({},{})".format(e, k)
@@ -208,11 +212,11 @@ if __name__ == "__main__":
     k = 8.0
     print "insert({},{})".format(e, k)
     pq.insert(e, k)
-       
+
     print "deleteMin()"
     pq.deleteMin()
     pq.stampa()
-                
+
     e = 4.0
     k = 2.0
     print "insert({},{})".format(e, k)

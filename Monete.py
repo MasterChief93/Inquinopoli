@@ -1,7 +1,8 @@
 __author__ = 'Federico'
 from time import time
 
-def distr(monete,resto):
+
+def distr(monete, resto):
     best = None
     bestins = len(monete)
     for i in range(len(monete)):
@@ -9,7 +10,7 @@ def distr(monete,resto):
         elig = []
         base = monete[i]
         elig.append(base)
-        for j in range(i+1,len(monete)):
+        for j in range(i + 1, len(monete)):
             if base + monete[j] <= resto:
                 elig.append(monete[j])
                 base += monete[j]
@@ -20,17 +21,18 @@ def distr(monete,resto):
         if sum == resto and ins < bestins:
             bestins = ins
             best = elig
-        #print best
+            #print best
     return best
 
-def distr2(mon,resto):
+
+def distr2(mon, resto):
     best = mon
     for i in range(len(mon)):
         elig = []
         sum = 0
         sum += mon[i]
         elig.append(mon[i])
-        for j in range(i,len(mon)):
+        for j in range(i, len(mon)):
             if sum + mon[j] <= resto:
                 sum += mon[j]
                 elig.append(mon[j])
@@ -39,18 +41,19 @@ def distr2(mon,resto):
     return best
 
 
-
-
-monete = [180,170,160,150,130,110,90,70,60,20,10]
+monete = [180, 170, 160, 150, 130, 110, 90, 70, 60, 20, 10]
 resto = 10
+
+
 def main():
     start = time()
-    print distr2(monete,resto)
+    print distr2(monete, resto)
     end = time()
-    print end-start
+    print end - start
     start = time()
-    print distr(monete,resto)
+    print distr(monete, resto)
     end = time()
-    print end-start
+    print end - start
+
 
 main()

@@ -5,6 +5,7 @@ from time import time
 from random import randrange
 from random import random
 
+
 def testPQ1(pqType, collection, d=None):
     # collection=[ (elem,key), ...]
     if pqType == 'PQbinary':
@@ -18,18 +19,21 @@ def testPQ1(pqType, collection, d=None):
         print "Testing", pqType, "with d=", d
     else:
         return
-    
+
     size = len(collection)
-    start = time()    
+    start = time()
     for e in collection:
         pq.insert(e[0], e[1])
     elapsed = time() - start
-    print "Insert running time (average over {} calls): {}, total: {}".format(size, float(elapsed) / size, float(elapsed))
-    start = time()    
+    print "Insert running time (average over {} calls): {}, total: {}".format(size, float(elapsed) / size,
+                                                                              float(elapsed))
+    start = time()
     while not pq.isEmpty():
         pq.deleteMin()
     elapsed = time() - start
-    print "DeleteMin running time (average over {} calls): {}, total: {}".format(size, float(elapsed) / size, float(elapsed))
+    print "DeleteMin running time (average over {} calls): {}, total: {}".format(size, float(elapsed) / size,
+                                                                                 float(elapsed))
+
 
 def testPQ2(pqType, collection, p, d=None):
     # collection=[ (elem,key), ...]
@@ -45,11 +49,11 @@ def testPQ2(pqType, collection, p, d=None):
         print "Testing", pqType, "with d=", d
     else:
         return
-    
+
     size = len(collection)
     start = time()
     nins = 0
-    ndel = 0    
+    ndel = 0
     for i in range(size):
         if i < size / 2:
             e = collection[i]
@@ -67,6 +71,7 @@ def testPQ2(pqType, collection, p, d=None):
     elapsed = time() - start
     print "Overall running time of mixed operations ({} inserts and {} deletes): {}".format(nins, ndel, float(elapsed))
 
+
 if __name__ == "__main__":
     collSize = 200000
     rand = False
@@ -78,7 +83,7 @@ if __name__ == "__main__":
         else:
             k = i
         collection.append([2 * k, k])
-    
+
     t1 = False
     if t1:
         testPQ1('PQbinary', collection)
@@ -100,4 +105,4 @@ if __name__ == "__main__":
             testPQ2('PQ_Dheap', collection, p, 16)
             testPQ2('PQ_Dheap', collection, p, 32)
             testPQ2('PQ_Dheap', collection, p, 64)
-            print 30*"*"
+            print 30 * "*"

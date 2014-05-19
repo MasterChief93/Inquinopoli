@@ -1,17 +1,19 @@
 from stack.Stack import PilaArrayList
 from queue.Queue import CodaArrayList_deque
 
+
 class TreeArrayListNode:
     def __init__(self, info):
         self.info = info
         self.father = None
         self.sons = []
 
+
 class TreeArrayList:
     def __init__(self, rootNode=None):
         self.root = rootNode
-            
-        
+
+
     def insert(self, father, sonsTree):
         sonsTree.root.father = father
         father.sons.append(sonsTree.root)
@@ -19,17 +21,17 @@ class TreeArrayList:
     def cut(self, node):
         if node.father == None: #it is the root
             return self
-        
+
         try:
             node.father.sons.remove(node)
         except ValueError:
             raise Exception("Error: unable to find the selected son to cut away!")
-        
+
         node.father = None
         return TreeArrayList(node)
-    
+
     def DFS(self):
-        res = []     
+        res = []
         stack = PilaArrayList()
         if self.root != None:
             stack.push(self.root)
