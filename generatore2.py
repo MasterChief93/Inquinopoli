@@ -1,5 +1,4 @@
-__author__ = 'Fabrizio' # generatore definitivo !
-
+# -*- coding: utf-8 -*-
 from random import randrange, seed, sample
 from time import time
 
@@ -53,6 +52,8 @@ def Generatore():
         file.write("\n")                            # Finite di scrivere le query sul file di input si passa alla riga successiva per scrivere, se presente, il caso successivo
     file.close()                                    # Finito di scrivere il file di input questo verrà chiusto per poi essere riaperto dalla funzione main()
 
-#start=time()
-#Generatore()
-#print time()-start
+if __name__ == "__main__":                          # Controllo atto a verificare se lo script viene eseguito direttamente o tramite importazione
+    start=time()
+    Generatore()
+    print "Il generatore ha generato i casi di test in ",time()-start
+

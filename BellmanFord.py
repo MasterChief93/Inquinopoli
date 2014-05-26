@@ -1,19 +1,32 @@
-__author__ = 'Federico & Fabrizio'
 # -*- coding: utf-8 -*-
 from time import time
 
 
-def BellmanFord(G, list):
-    # Inizializzazione dizionari
-    qcity = dict()
-    Distance = dict()
+def BellmanFord(G, list, casenumb):
+    """
+    Funzone atta a calcolare i costi dei percorsi dal primo nodo ai nodi presenti nella query. Il grafo, i nodi e gli
+    archi sono inizializzati come classi, mentre i costi relativi ai nodi e le query sono inizializzati come dizionari.
+    Il calcolo viene svolto tramite l'algoritmo di Bellman-Ford, al quale viene aggiunta un'ulteriore passata per ovviare
+    al problema dei cicli negativi. La funzione restituisce infine i costi dei nodi presenti nel dizionario qcity.
+    @param casenumb: int; numero del caso in esame
+    @param G: istanza della classe Graph
+    @param list: list; lista di interi rappresentanti le query
+    @return: outlist: list; lista contenente il numero del caso in esame e i costi delle relative query
+    """
 
-    # Impostazione dei valori come None
+    # Inizializzazione dizionari
+
+    qcity = dict()        # dizionario contenente le query
+    Distance = dict()     # dizionario contenente i costi di tutti i nodi del grafo a partire dal nodo di indice 1
+
+    # Assegnazione del valore None agli elementi di qcity
+
     init = time()
     for elem in list:
         qcity[elem] = None
 
-    # Aggiunta di tutti gli archi in un array
+    # Inizializzazione lista "arcs", contenente tutti gli archi del grafo, e inizializzazione di tutte le distanze a +∞
+
     arcs = []
     for node in G.nodes:
         Distance[node] = float("+inf")
@@ -22,15 +35,19 @@ def BellmanFord(G, list):
                 arcs.append(arc)
 
 
-    # Prima passata di Bellman/Ford
+    # Prima passata di Bellman-Ford
+
     belford_first = time()
-    Distance[1] = 0
-    #for i in range(0, len(G.cities) - 1):
-    for elem in arcs:
-        if Distance[elem.dep] != float("+inf") and Distance[elem.arr] > Distance[elem.dep] + elem.weight:
-            Distance[elem.arr] = Distance[elem.dep] + elem.weight
-            if elem.arr in list and Distance[elem.arr] < 3:
-                qcity[elem.arr] = 0
+    Distance[1] = 0              # Partendo sempre dal nodo di indice 1 il suo costo sarà sempre uguale a 0
+
+    # Classico Bellman-Ford
+
+    for node in G.nodes:
+        for elem in arcs:
+            if Distance[elem.dep] != float("+inf") and Distance[elem.arr] > Distance[elem.dep] + elem.weight:
+                Distance[elem.arr] = Distance[elem.dep] + elem.weight
+                if elem.arr in list and Distance[elem.arr] < 3:
+                    qcity[elem.arr] = 0
     print "Prima passata Bellman/Ford in: ", time() - belford_first, "con ", len(G.arcs), "nodi e ", len(arcs), "archi"
 
     # Aggiustamento valori in qlist
@@ -49,9 +66,9 @@ def BellmanFord(G, list):
 
     # Restituzione dati ottenuti
     print Distance
-    for elem in qcity:
-        #print "Nodo: " + str(elem) + " --> Costo: " + str(qcity[elem])
-        #print Distance
+    outlist=[casenumb]         # Inizializzazione lista "outlist": tale lista tiene in memoria i dai da stampare successivamente per ogni caso di test
+    for elem in qcity:         # Ciclo che popola la lista "outlist" con le query del caso
         print qcity[elem] if qcity[elem] >= 0 and qcity[elem] != float("+inf") else "?"
-
+        outlist.append(qcity[elem])
     print "Tempo totale : ", time() - init
+    return outlist

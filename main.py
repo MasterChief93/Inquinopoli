@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
-#import networkx as nx
-#import matplotlib.pyplot as plt
-#from PriorityDijkstra import dijkstra2,dijkstra
-from time import time           # Importazione libreria time per la misurazione il tempo
+from time import time           # Importazione della funzione time della libreria time per la misurazione il tempo
 
+import generatore2              # Importazione dello script contenente la funzione Generatore
 import BellmanFord              # Importazione file BellmanFord.py sul quale è presente l'algoritmo risolutivo del grafo
 
 
@@ -63,46 +61,61 @@ def main(file):
     per la risoluzione del caso di test
     @param file: fileobject; tipo di dato file con indirizzo relativo alla posizione del file di input
     """
+    generatore2.Generatore()
     result = reading(file)
-    print result
+    total_outlist=[]
+
     for i in range(0, len(result)):         # Inizializzazione del grafo G come elemento della classe Graph per ogni caso di test
         G = Graph()
         for j in range(len(result[i][1])):  # Per ogni caso di test l'elemento 1 contiene tutti i valore di pm20 dei nodi
             G.insertNode(j + 1, result[i][1][j])  # Questi perciò saranno aggiunti con indici pari a j + 1 (da 1 a n) e peso pari al pm20 letto
 
-        for elem in result[i][2]:            #TODO commentare
+        for elem in result[i][2]:            # Ciclo che, tramite la funzione insertArc, inserisce nel grafo tutti gli archi letti dal file di input
             G.insertArc(int(elem[0]), int(elem[1]))
         print "\nCaso " + str(i + 1) + ":"
-        BellmanFord.BellmanFord(G, result[i][3]) #TODO commentare
 
+        outlist = BellmanFord.BellmanFord(G, result[i][3], i + 1) # Invocazione della funzione BellmanFord dall'omonimo file per il calcolo dei costi del grafo
+        total_outlist.append(outlist)
+    outfile=open("output.txt","w")
+    for case in total_outlist:
+        outfile.write("Caso "+str(case[0])+":\n")
+        for i in range(1,len(case)):
+            outfile.write(str(case[i]) + "\n")
+    outfile.close()
 
-def reading(file): #TODO finire di commentare
-
-    x = file.readlines()
+def reading(file):
+    """
+    Funzione atta a leggere tutti i casi di test del file di input
+    @param file: file object; file di input
+    @return: Total: list; lista di liste i cui elementi rappresentano i singoli casi di test
+    """
+    data = file.readlines() # Assegnazione di variabile : a "data" viene assegnato il contenuto dell'intero file
     Total = []           # Creazione della lista Total
-    numbcase = x[0]      # Assegnazione di variabile : alla variabile "numbcase" viene assegnato il valore di x[0] il quale, per com'è costruito il file di input, indica sempre il numero di test da effettuare
-    i = 1                # Assegnazione di variabile : la variabile "i" viene assegnato il valore 1. La variabile i servirà nel cilo while successivo per determinare quando si sarà letto tutto il file
-    while i < len(x) - 1: # Ciclo che legge tutto il file, basandosi sul contatore i
-        if x[i] == "\n":  # Se x[i] == "\n" allora alla riga successiva inizierà un nuovo caso
+    numbcase = data[0]      # Assegnazione di variabile : a "numbcase" viene assegnato il valore di data[0] il quale, per com'è costruito il file di input, indica sempre il numero di test da effettuare
+    i = 1                # Assegnazione di variabile : ad "i" viene assegnato il valore 1. La variabile i servirà nel cilo while successivo per determinare quando si sarà letto tutto il file
+    while i < len(data) - 1: # Ciclo che legge tutto il file, basandosi sul contatore i
+        if data[i] == "\n":  # Se data[i] == "\n" allora alla riga successiva inizierà un nuovo caso
 
-            numbnode = x[i + 1].strip()
-            pm20list = x[i + 2].strip().split(' ')
-            numbarc = x[i + 3].strip()
+            # Assegnazione di variabili ed inizializzazione liste
+
+            numbnode = data[i + 1].strip()                         # a "numbnode" viene assegnato data[i + 1], ovvero il numero di nodi presenti nel grafo
+            pm20list = data[i + 2].strip().split(' ')              # "pm20list" è una lista contenente le concentrazioni medie di polveri sottili presenti nei nodi del grafo
+            numbarc = data[i + 3].strip()                          # a "numbarc" viene assegnato data[i + 3], ovvero il numero di archi presenti nel grafo
             arcs = []
-            len_arcs = i + 3 + int(numbarc) + 1
-            for j in range(i + 4, len_arcs):
-                arcs.append(x[j].strip().split(' '))
+            len_arcs = i + 3 + int(numbarc) + 1                    # "len_arcs" indica la lunghezza, nel file, delle righe di coppie di archi; serve a sapere quando dal file di input sono state lette tutte le coppie
+            for j in range(i + 4, len_arcs):                       # Ciclo che inserisce nella lista "arcs" tutte le coppie di archi presenti nel grafo
+                arcs.append(data[j].strip().split(' '))
             query = []
-            for j in range(len_arcs + 1, len_arcs + int(x[len_arcs]) + 1):
-                query.append(int(x[j].strip()))
-            case = [numbnode, pm20list, arcs, query]
-            Total.append(case)
+            for j in range(len_arcs + 1, len_arcs + int(data[len_arcs]) + 1):   # Ciclo che inserisce nella lista "query" tutte le query lette dal file di input
+                query.append(int(data[j].strip()))
+            case = [numbnode, pm20list, arcs, query]               # la lista "case" contiene tutte le informazioni relative al singolo caso di test in esame
+            Total.append(case)                                     # ogni caso è aggiunto alla lista "Total"
 
-        i = len_arcs + int(x[len_arcs]) + 1
+        i = len_arcs + int(data[len_arcs]) + 1                     # Aggiornamento del contatore "i" per passare al caso successivo, se questo sarà maggiore della lunghezza del file il ciclo while terminerà
     return Total
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":                           # Controllo atto a verificare se lo script viene eseguito direttamente o tramite importazione
     start = time()
     file = open('input2.txt', 'r')
     main(file)
