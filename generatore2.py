@@ -68,15 +68,18 @@ def Generatore():
             while len(qlist) < q:                       # Ciclo che popola la lista qlist con q elementi di valore intero qn
 
                 qn = randrange(2, n)                    # Il nodo 1 non fa mai parte della lista delle query essendo il nodo di partenza, 2 < "qn" < n
-                if qn not in qlist:                     # Se qn, rappresentante l'indice del nodo da aggiungere alla lista delle query, non è già presente in qlist, la lista delle query, allora viene aggiunto
-                    file.write(str(qn) + "\n")          # Scrittura sul file di input della query generata casualmente
+                if qn not in qlist:
+                    if len(qlist) == q - 1 and casetest + 1 == test:
+                        file.write(str(qn))          # Scrittura sul file di input della query generata casualmente
+                    else:
+                        file.write(str(qn) + "\n")
                     qlist.append(qn)                    # Inserimento di qn nella lista qlist, necessario per poter uscire dal ciclo while
             #qav+=time()-qstart
 
         else:
             qlist=[2]
-
-        file.write("\n")                            # Finite di scrivere le query sul file di input si passa alla riga successiva per scrivere, se presente, il caso successivo
+        if not casetest == test - 1:
+            file.write("\n")                            # Finite di scrivere le query sul file di input si passa alla riga successiva per scrivere, se presente, il caso successivo
         #TODO file.close()
     file.close()                                # Finito di scrivere il file di input questo verrà chiusto per poi essere riaperto dalla funzione main()
 

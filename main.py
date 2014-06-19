@@ -92,14 +92,14 @@ def reading(file):
     """
     data = file.readlines() # Assegnazione di variabile : a "data" viene assegnato il contenuto dell'intero file
     Total = []           # Creazione della lista Total
-    try:
-        numbcase = data[0]      # Assegnazione di variabile : a "numbcase" viene assegnato il valore di data[0] il quale, per com'è costruito il file di input, indica sempre il numero di test da effettuare
-    except Exception, e:
-        print data
+    #try:
+    numbcase = data[0]      # Assegnazione di variabile : a "numbcase" viene assegnato il valore di data[0] il quale, per com'è costruito il file di input, indica sempre il numero di test da effettuare
+    #except Exception, e:
+    #    print data
     i = 1                # Assegnazione di variabile : ad "i" viene assegnato il valore 1. La variabile i servirà nel cilo while successivo per determinare quando si sarà letto tutto il file
-    while i < len(data) - 1: # Ciclo che legge tutto il file, basandosi sul contatore i
+    while i != len(data): # Ciclo che legge tutto il file, basandosi sul contatore i
         if data[i] == "\n":  # Se data[i] == "\n" allora alla riga successiva inizierà un nuovo caso
-            # Assegnazione di variabili ed inizializzazione liste
+                                                                    # Assegnazione di variabili ed inizializzazione liste
             numbnode = data[i + 1].strip()                         # a "numbnode" viene assegnato data[i + 1], ovvero il numero di nodi presenti nel grafo
             pm20list = data[i + 2].strip().split(' ')              # "pm20list" è una lista contenente le concentrazioni medie di polveri sottili presenti nei nodi del grafo
             numbarc = data[i + 3].strip()                          # a "numbarc" viene assegnato data[i + 3], ovvero il numero di archi presenti nel grafo
@@ -108,23 +108,24 @@ def reading(file):
                 if len(data[j].strip().split(' ')) == 2:
                     arcs.append(data[j].strip().split(' '))
                 else:
-                    i = j + 1
-                    print data[i-1:i+1]
+                    i = j
+
+
                     break
+
             query = []
-            for j in range(i, i + int(data[i])):   # Ciclo che inserisce nella lista "query" tutte le query lette dal file di input
-                try:
+
+
+            for j in range(i + 1, i + int(data[i]) + 1):   # Ciclo che inserisce nella lista "query" tutte le query lette dal file di input
                     query.append(int(data[j].strip()))
-                except Exception, e:
-                    print data[j].strip(), "ciacia"
-                    return
 
             case = [numbnode, pm20list, arcs, query]               # la lista "case" contiene tutte le informazioni relative al singolo caso di test in esame
             Total.append(case)                                     # ogni caso è aggiunto alla lista "Total"
-            i = len_arcs + int(data[len_arcs]) + 1                     # Aggiornamento del contatore "i" per passare al caso successivo, se questo sarà maggiore della lunghezza del file il ciclo while terminerà
-            print i, len(data)
-        else:
-            i += 1
+            i = j + 1                                                 # Aggiornamento del contatore "i" per passare al caso successivo, se questo sarà maggiore della lunghezza del file il ciclo while terminerà
+            #print "ultimo", data[i]
+            #print query
+        #else:
+        #    i += 1
     return Total
 
 
