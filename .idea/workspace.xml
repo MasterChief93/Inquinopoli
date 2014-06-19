@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="418f56e1-391c-4895-a7b9-f5acd410d691" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BellmanFord.py" afterPath="$PROJECT_DIR$/BellmanFord.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generatore2.py" afterPath="$PROJECT_DIR$/generatore2.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input2.txt" afterPath="$PROJECT_DIR$/input2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Inquinopoli.iws" />
@@ -27,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1411" max-vertical-offset="2176">
-              <caret line="83" column="19" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="19" />
+            <state vertical-scroll-proportion="2.2802198" vertical-offset="336" max-vertical-offset="2346">
+              <caret line="96" column="19" selection-start-line="96" selection-start-column="19" selection-end-line="96" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -40,25 +41,18 @@
       <file leaf-file-name="BellmanFord.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BellmanFord.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1258" max-vertical-offset="1360">
-              <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="920" max-vertical-offset="1479">
+              <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="input2.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/input2.txt">
-          <provider selected="true" editor-type-id="LargeFileEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="generatore2.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="generatore2.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/generatore2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.510989" vertical-offset="962" max-vertical-offset="1530">
-              <caret line="73" column="30" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1132" max-vertical-offset="1700">
+              <caret line="83" column="30" selection-start-line="83" selection-start-column="30" selection-end-line="83" selection-end-column="30" />
               <folding>
                 <element signature="e#24#66#0" expanded="true" />
               </folding>
@@ -98,15 +92,14 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/generatore" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/GUI.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/main.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Generatore.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/generatore2.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/input2.txt" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/generatore" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/BellmanFord.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/input.txt" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PriorityDijkstra.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/main.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/GUI.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Generatore.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -125,8 +118,8 @@
         <option value="$PROJECT_DIR$/output.txt" />
         <option value="$PROJECT_DIR$/input2.txt" />
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/BellmanFord.py" />
         <option value="$PROJECT_DIR$/generatore2.py" />
+        <option value="$PROJECT_DIR$/BellmanFord.py" />
       </list>
     </option>
   </component>
@@ -604,7 +597,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15187714" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -688,9 +681,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/input2.txt">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state />
+    <entry file="file://$PROJECT_DIR$/generatore2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="962" max-vertical-offset="1530">
+          <caret line="73" column="30" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
+          <folding>
+            <element signature="e#24#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="1020">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2176">
+          <caret line="83" column="19" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BellmanFord.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1258" max-vertical-offset="1360">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/generatore2.py">
@@ -727,13 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/input2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="33025305" max-vertical-offset="37855957">
-          <caret line="1942665" column="0" selection-start-line="1942665" selection-start-column="0" selection-end-line="1942665" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generatore2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="968" max-vertical-offset="1513">
@@ -765,13 +780,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1258" max-vertical-offset="1360">
           <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8059241">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -869,39 +877,29 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/generatore2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1132" max-vertical-offset="1700">
+          <caret line="83" column="30" selection-start-line="83" selection-start-column="30" selection-end-line="83" selection-end-column="30" />
+          <folding>
+            <element signature="e#24#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BellmanFord.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1258" max-vertical-offset="1360">
-          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="920" max-vertical-offset="1479">
+          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1411" max-vertical-offset="2176">
-          <caret line="83" column="19" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="19" />
+        <state vertical-scroll-proportion="2.2802198" vertical-offset="336" max-vertical-offset="2346">
+          <caret line="96" column="19" selection-start-line="96" selection-start-column="19" selection-end-line="96" selection-end-column="19" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input2.txt">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="33025305" max-vertical-offset="37855957">
-          <caret line="1942665" column="0" selection-start-line="1942665" selection-start-column="0" selection-end-line="1942665" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generatore2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.510989" vertical-offset="962" max-vertical-offset="1530">
-          <caret line="73" column="30" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
-          <folding>
-            <element signature="e#24#66#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

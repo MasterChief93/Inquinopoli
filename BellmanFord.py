@@ -16,12 +16,16 @@ def BellmanFord(G, list, casenumb):
 
     # Inizializzazione dizionari
 
+    global tot,bel1,bel2
+    tot=0
+    bel1=0
+    bel2=0
+    bellstart=time()
     qcity = dict()        # dizionario contenente le query
     Distance = dict()     # dizionario contenente i costi di tutti i nodi del grafo a partire dal nodo di indice 1
 
     # Assegnazione del valore None agli elementi di qcity
 
-    init = time()
     for elem in list:
         qcity[elem] = None
 
@@ -48,7 +52,8 @@ def BellmanFord(G, list, casenumb):
                 Distance[elem.arr] = Distance[elem.dep] + elem.weight
                 if elem.arr in list and Distance[elem.arr] < 3:
                     qcity[elem.arr] = 0
-    print "Prima passata Bellman/Ford in: ", time() - belford_first, "con ", len(G.arcs), "nodi e ", len(arcs), "archi"
+    bel1+= time() - belford_first
+    #print "Prima passata Bellman/Ford in: ", time() - belford_first, "con ", len(G.arcs), "nodi e ", len(arcs), "archi"
 
     # Aggiustamento valori in qlist
     for elem in list:
@@ -62,13 +67,15 @@ def BellmanFord(G, list, casenumb):
             Distance[elem.arr] = Distance[elem.dep] + elem.weight
             if elem.arr in list and Distance[elem.arr] < 3:
                 qcity[elem.arr] = 0
-    print "Seconda passata Bellman/Ford in: ", time() - belford_sec
+    bel2+= time() - belford_sec
+    #print "Seconda passata Bellman/Ford in: ", time() - belford_sec
 
     # Restituzione dati ottenuti
-    print Distance
+    #print Distance
     outlist=[casenumb]         # Inizializzazione lista "outlist": tale lista tiene in memoria i dai da stampare successivamente per ogni caso di test
     for elem in qcity:         # Ciclo che popola la lista "outlist" con le query del caso
-        print qcity[elem] if qcity[elem] >= 0 and qcity[elem] != float("+inf") else "?"
+        #print qcity[elem] if qcity[elem] >= 0 and qcity[elem] != float("+inf") else "?"
         outlist.append(qcity[elem])
-    print "Tempo totale : ", time() - init
+    tot+= time() - bellstart
+    #print "Tempo totale : ", time() - bellstart bulabula
     return outlist
