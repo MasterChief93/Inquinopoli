@@ -3,12 +3,12 @@ from random import randrange, seed, sample
 from time import time
 
 
-def Generatore():
+def Generatore(file):
     """
     Funzione atta a scrivere un file di input sotto le opportune condizioni richeste dal progetto stesso
     """
 
-    file = open("input2.txt", "w") # Apertura del file
+    #TODO file = open("input2.txt", "w") # Apertura del file
     test = randrange(1, 50)        # Generazione casuale del numero di test da effettuare mediante la funzione randrange della libreria random di Python
     file.write(str(test) + "\n\n") # Scrittura sul file di input : la prima riga conterrà sempre il numero di test da effettuare, seguita da una riga vuota
     #TODO file.close()
@@ -81,8 +81,8 @@ def Generatore():
         if not casetest == test - 1:
             file.write("\n")                            # Finite di scrivere le query sul file di input si passa alla riga successiva per scrivere, se presente, il caso successivo
         #TODO file.close()
-    file.close()                                # Finito di scrivere il file di input questo verrà chiusto per poi essere riaperto dalla funzione main()
-
+    #TODO file.close()                                # Finito di scrivere il file di input questo verrà chiusto per poi essere riaperto dalla funzione main()
+    print "Generazione casi completata"
 
     # print "Tempo medio per generare e scrivere gli inquinamenti: ",polav/float(10000)
     # print "Tempo medio per popolare la lista totale degli archi: ",totalarcav/float(10000)

@@ -54,15 +54,15 @@ class Graph:                   # Inizializzazione classe Graph
                     self.arcs[dep] = [Arc(dep, arr, weight)]          # altrimenti verrà inserita una nuova coppia chiave-valore
 
 
-def main(file):
+def maint(input_file,output_file):
     """
     Funzione principale del programma : provvede alla chiamata della funzoine reading per la letture del file,
     crea un grafo per ogni caso di test (aggiungendo nodi ed archi allo stesso) per poi invocare la funzione BellmanFord
     per la risoluzione del caso di test
-    @param file: fileobject; tipo di dato file con indirizzo relativo alla posizione del file di input
+    @param input_file: fileobject; tipo di dato file con indirizzo relativo alla posizione del file di input
     """
-    generatore2.Generatore()
-    result = reading(file)
+    #TODO generatore2.Generatore()
+    result = reading(input_file)
     total_outlist=[]
 
     for i in range(0, len(result)):         # Inizializzazione del grafo G come elemento della classe Graph per ogni caso di test
@@ -77,7 +77,7 @@ def main(file):
         outlist = BellmanFord.BellmanFord(G, result[i][3], i + 1) # Invocazione della funzione BellmanFord dall'omonimo file per il calcolo dei costi del grafo
         total_outlist.append(outlist)
 
-    outfile=open("output.txt","w")
+    outfile=open(output_file,"w")
     for case in total_outlist:
         outfile.write("Caso "+str(case[0])+":\n")
         for i in range(1,len(case)):
@@ -100,28 +100,25 @@ def reading(file):
     while i != len(data): # Ciclo che legge tutto il file, basandosi sul contatore i
         if data[i] == "\n":  # Se data[i] == "\n" allora alla riga successiva inizierà un nuovo caso
                                                                     # Assegnazione di variabili ed inizializzazione liste
-            numbnode = data[i + 1].strip()                         # a "numbnode" viene assegnato data[i + 1], ovvero il numero di nodi presenti nel grafo
-            pm20list = data[i + 2].strip().split(' ')              # "pm20list" è una lista contenente le concentrazioni medie di polveri sottili presenti nei nodi del grafo
-            numbarc = data[i + 3].strip()                          # a "numbarc" viene assegnato data[i + 3], ovvero il numero di archi presenti nel grafo
-            arcs = []                                              # "len_arcs" indica la lunghezza, nel file, delle righe di coppie di archi; serve a sapere quando dal file di input sono state lette tutte le coppie
+            numbnode = data[i + 1].strip()                          # a "numbnode" viene assegnato data[i + 1], ovvero il numero di nodi presenti nel grafo
+            pm20list = data[i + 2].strip().split(' ')               # "pm20list" è una lista contenente le concentrazioni medie di polveri sottili presenti nei nodi del grafo
+            numbarc = data[i + 3].strip()                           # a "numbarc" viene assegnato data[i + 3], ovvero il numero di archi presenti nel grafo
+            arcs = []                                               # "len_arcs" indica la lunghezza, nel file, delle righe di coppie di archi; serve a sapere quando dal file di input sono state lette tutte le coppie
             for j in range(i + 4, len(data)):                       # Ciclo che inserisce nella lista "arcs" tutte le coppie di archi presenti nel grafo
                 if len(data[j].strip().split(' ')) == 2:
                     arcs.append(data[j].strip().split(' '))
                 else:
                     i = j
-
-
                     break
-
             query = []
-
-
             for j in range(i + 1, i + int(data[i]) + 1):   # Ciclo che inserisce nella lista "query" tutte le query lette dal file di input
+                try:
                     query.append(int(data[j].strip()))
-
+                except:
+                    print data[j]
             case = [numbnode, pm20list, arcs, query]               # la lista "case" contiene tutte le informazioni relative al singolo caso di test in esame
             Total.append(case)                                     # ogni caso è aggiunto alla lista "Total"
-            i = j + 1                                                 # Aggiornamento del contatore "i" per passare al caso successivo, se questo sarà maggiore della lunghezza del file il ciclo while terminerà
+            i = j + 1                                              # Aggiornamento del contatore "i" per passare al caso successivo, se questo sarà maggiore della lunghezza del file il ciclo while terminerà
             #print "ultimo", data[i]
             #print query
         #else:

@@ -52,10 +52,11 @@ def BellmanFord(G, list, casenumb):
                 Distance[elem.arr] = Distance[elem.dep] + elem.weight
                 if elem.arr in list and Distance[elem.arr] < 3:
                     qcity[elem.arr] = 0
-    bel1+= time() - belford_first
-    #print "Prima passata Bellman/Ford in: ", time() - belford_first, "con ", len(G.arcs), "nodi e ", len(arcs), "archi"
+    bel1 += time() - belford_first
+    print "Prima passata Bellman/Ford in: ", time() - belford_first, "con ", len(G.arcs), "nodi e ", len(arcs), "archi"
 
     # Aggiustamento valori in qlist
+
     for elem in list:
         if qcity[elem] != 0:
             qcity[elem] = Distance[elem]
@@ -68,7 +69,7 @@ def BellmanFord(G, list, casenumb):
             if elem.arr in list and Distance[elem.arr] < 3:
                 qcity[elem.arr] = 0
     bel2+= time() - belford_sec
-    #print "Seconda passata Bellman/Ford in: ", time() - belford_sec
+    print "Seconda passata Bellman/Ford in: ", time() - belford_sec
 
     # Restituzione dati ottenuti
     #print Distance
@@ -77,5 +78,5 @@ def BellmanFord(G, list, casenumb):
         #print qcity[elem] if qcity[elem] >= 0 and qcity[elem] != float("+inf") else "?"
         outlist.append(qcity[elem])
     tot+= time() - bellstart
-    #print "Tempo totale : ", time() - bellstart bulabula
+    print "Tempo totale : ", time() - bellstart
     return outlist
