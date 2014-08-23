@@ -68,7 +68,9 @@ def BellmanFord(G, list, casenumb):
             Distance[elem.arr] = Distance[elem.dep] + elem.weight
             if elem.arr in list and Distance[elem.arr] < 3:
                 qcity[elem.arr] = 0
-    print "esplorato e risolto in",time()-algtime,"s"
+    global bubba
+    bubba=time()-algtime
+    print "esplorato e risolto in",bubba,"s"
     bel2+= time() - belford_sec
     #print "Seconda passata Bellman/Ford in: ", time() - belford_sec
 

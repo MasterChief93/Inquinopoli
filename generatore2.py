@@ -24,7 +24,7 @@ def Generatore(file):
 
         #TODO file = open("input2.txt","a+")
         seed(time() + casetest)           # Randomizzazione del seed per la libreria random
-        n = 2#randrange(2, 200)      # Generazione casuale del numero di nodi presenti nel grafo del singolo caso in esame
+        n = randrange(2, 200)      # Generazione casuale del numero di nodi presenti nel grafo del singolo caso in esame
         file.write(str(n) + "\n")  # Scrittura del numero di nodi sul file di input e successivo cambo di riga
 
         #polstart=time()
@@ -57,10 +57,12 @@ def Generatore(file):
 
         if n==2:
             q=1
+            file.write(str(q) + "\n")                   # Scrittura sul file di input del numero di query del caso in esame
+            file.write("2"+"\n")
         else:
             q = randrange(1, n-1)                         # Generazione casuale del numero q di query del caso in esame
-        file.write(str(q) + "\n")                   # Scrittura sul file di input del numero di query del caso in esame
-        file.write("2"+"\n")                        # Se sono presenti solo 2 nodi allora il nodo di arrivo dovrà essere necessariamente il nodo 2
+            file.write(str(q) + "\n")                   # Scrittura sul file di input del numero di query del caso in esame
+
         qlist = []                                  # Creazione della lista qlist, lista atta a contenere le query del caso in esame
 
         #qstart=time()
