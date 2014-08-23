@@ -69,14 +69,11 @@ def maint(input_file,output_file):
         G = Graph()
         for j in range(len(result[i][1])):  # Per ogni caso di test l'elemento 1 contiene tutti i valore di pm20 dei nodi
             G.insertNode(j + 1, result[i][1][j])  # Questi perciò saranno aggiunti con indici pari a j + 1 (da 1 a n) e peso pari al pm20 letto
-
         for elem in result[i][2]:            # Ciclo che, tramite la funzione insertArc, inserisce nel grafo tutti gli archi letti dal file di input
             G.insertArc(int(elem[0]), int(elem[1]))
         #print "\nCaso " + str(i + 1) + ":"
-
         outlist = BellmanFord.BellmanFord(G, result[i][3], i + 1) # Invocazione della funzione BellmanFord dall'omonimo file per il calcolo dei costi del grafo
         total_outlist.append(outlist)
-
     outfile=open(output_file,"w")
     for case in total_outlist:
         outfile.write("Caso "+str(case[0])+":\n")
@@ -90,14 +87,17 @@ def reading(file):
     @param file: file object; file di input
     @return: Total: list; lista di liste i cui elementi rappresentano i singoli casi di test
     """
-    data = file.readlines() # Assegnazione di variabile : a "data" viene assegnato il contenuto dell'intero file
+    data=[]
+    while len(data) == 0:
+        data = file.readlines() # Assegnazione di variabile : a "data" viene assegnato il contenuto dell'intero file
+    numbcase = data[0]      # Assegnazione di variabile : a "numbcase" viene assegnato il valore di data[0] il quale, per com'è costruito il file di input, indica sempre il numero di test da effettuare
     Total = []           # Creazione della lista Total
     #try:
-    numbcase = data[0]      # Assegnazione di variabile : a "numbcase" viene assegnato il valore di data[0] il quale, per com'è costruito il file di input, indica sempre il numero di test da effettuare
     #except Exception, e:
     #    print data
     i = 1                # Assegnazione di variabile : ad "i" viene assegnato il valore 1. La variabile i servirà nel cilo while successivo per determinare quando si sarà letto tutto il file
     while i != len(data): # Ciclo che legge tutto il file, basandosi sul contatore i
+        print i,len(data)
         if data[i] == "\n":  # Se data[i] == "\n" allora alla riga successiva inizierà un nuovo caso
                                                                     # Assegnazione di variabili ed inizializzazione liste
             numbnode = data[i + 1].strip()                          # a "numbnode" viene assegnato data[i + 1], ovvero il numero di nodi presenti nel grafo
@@ -131,4 +131,4 @@ if __name__ == "__main__":                           # Controllo atto a verifica
     file = open('input2.txt', 'r')
     main(file)
     end = time()
-    print end - start                     #CANCELLARE
+    print end - start

@@ -24,7 +24,7 @@ def Generatore(file):
 
         #TODO file = open("input2.txt","a+")
         seed(time() + casetest)           # Randomizzazione del seed per la libreria random
-        n = randrange(2, 200)      # Generazione casuale del numero di nodi presenti nel grafo del singolo caso in esame
+        n = 2#randrange(2, 200)      # Generazione casuale del numero di nodi presenti nel grafo del singolo caso in esame
         file.write(str(n) + "\n")  # Scrittura del numero di nodi sul file di input e successivo cambo di riga
 
         #polstart=time()
@@ -45,7 +45,7 @@ def Generatore(file):
         #totalarcav=time()-totalarcstaart
 
         #arcsstart=time()
-        m = randrange(0, n * (n - 1))               # Generazione casuale del numero di archi presenti nel grafo del singolo caso in esame
+        m = n*(n-1)#randrange(0, n * (n - 1))               # Generazione casuale del numero di archi presenti nel grafo del singolo caso in esame
         final_arclist = sample(arclist, m)          # La lista final_arclist viene popolata con m elementi casuali della lista arclist grazie alla funzione sample della libreria random di Python
         file.write(str(len(arclist)) + "\n")        # Scrittura sul file di input del numero di archi presenti nel grafo del caso in esame
         #arcstartav+=time()-arcsstart
@@ -60,6 +60,7 @@ def Generatore(file):
         else:
             q = randrange(1, n-1)                         # Generazione casuale del numero q di query del caso in esame
         file.write(str(q) + "\n")                   # Scrittura sul file di input del numero di query del caso in esame
+        file.write("2"+"\n")                        # Se sono presenti solo 2 nodi allora il nodo di arrivo dovrà essere necessariamente il nodo 2
         qlist = []                                  # Creazione della lista qlist, lista atta a contenere le query del caso in esame
 
         #qstart=time()
@@ -76,14 +77,14 @@ def Generatore(file):
                     qlist.append(qn)                    # Inserimento di qn nella lista qlist, necessario per poter uscire dal ciclo while
             #qav+=time()-qstart
 
-        else:
-            qlist=[2]
+        #else:
+        #    qlist=[2]
         if not casetest == test - 1:
             file.write("\n")                            # Finite di scrivere le query sul file di input si passa alla riga successiva per scrivere, se presente, il caso successivo
         #TODO file.close()
     #TODO file.close()                                # Finito di scrivere il file di input questo verrà chiusto per poi essere riaperto dalla funzione main()
-    print "Generazione casi completata"
-
+    #print "Generazione casi completata"
+    print "Generato grafo con",n,"nodi e",m,"archi"
     # print "Tempo medio per generare e scrivere gli inquinamenti: ",polav/float(10000)
     # print "Tempo medio per popolare la lista totale degli archi: ",totalarcav/float(10000)
     # print "Tempo medio per scegliere m archi: ",arcstartav/float(10000)
@@ -93,5 +94,5 @@ def Generatore(file):
 if __name__ == "__main__":                          # Controllo atto a verificare se lo script viene eseguito direttamente o tramite importazione
     start=time()
     Generatore()
-    print "Il generatore ha generato i casi di test in ",time()-start
+    #print "Il generatore ha generato i casi di test in ",time()-start
 
