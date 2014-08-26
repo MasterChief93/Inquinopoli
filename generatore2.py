@@ -46,12 +46,12 @@ def Generatore(file,btest,bnode,barch,percentage):
         #arcsstart=time()
         m = randrange(0, n * (n - 1)) if barch == 0 else barch      # Generazione casuale del numero di archi presenti nel grafo del singolo caso in esame
         density = m * (float(percentage)/100)
-        density = density + 1 if density == 0 else density
+        density = density + 1 if int(density) == 0 else density
         final_arclist = sample(arclist, int(density))          # La lista final_arclist viene popolata con m elementi casuali della lista arclist grazie alla funzione sample della libreria random di Python
         file.write(str(len(final_arclist)) + "\n")        # Scrittura sul file di input del numero di archi presenti nel grafo del caso in esame
         #arcstartav+=time()-arcsstart
 
-        #arcwritestart=time()
+        #arcwritestart=time()W
         for arc in final_arclist:                         # Ciclo che scrive sul file di input tutti gli archi del grafo del caso in esame
             file.write(str(arc[0]) + " " + str(arc[1]) + "\n")
         #arcwriteav+=time()-arcwritestart
