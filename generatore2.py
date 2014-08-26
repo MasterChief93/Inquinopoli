@@ -3,13 +3,13 @@ from random import randrange, seed, sample
 from time import time
 
 
-def Generatore(file):
+def Generatore(file,btest,bnode,barch):
     """
     Funzione atta a scrivere un file di input sotto le opportune condizioni richeste dal progetto stesso
     """
 
     #TODO file = open("input2.txt", "w") # Apertura del file
-    test = randrange(1, 50)        # Generazione casuale del numero di test da effettuare mediante la funzione randrange della libreria random di Python
+    test = randrange(1, 50) if btest == 0 else btest    # Generazione casuale del numero di test da effettuare mediante la funzione randrange della libreria random di Python
     file.write(str(test) + "\n\n") # Scrittura sul file di input : la prima riga conterrà sempre il numero di test da effettuare, seguita da una riga vuota
     #TODO file.close()
     polav=0
@@ -24,7 +24,7 @@ def Generatore(file):
 
         #TODO file = open("input2.txt","a+")
         seed(time() + casetest)           # Randomizzazione del seed per la libreria random
-        n = randrange(2, 200)      # Generazione casuale del numero di nodi presenti nel grafo del singolo caso in esame
+        n = randrange(2, 200) if bnode == 0 else bnode     # Generazione casuale del numero di nodi presenti nel grafo del singolo caso in esame
         file.write(str(n) + "\n")  # Scrittura del numero di nodi sul file di input e successivo cambo di riga
 
         #polstart=time()
@@ -45,7 +45,7 @@ def Generatore(file):
         #totalarcav=time()-totalarcstaart
 
         #arcsstart=time()
-        m = n*(n-1)#randrange(0, n * (n - 1))               # Generazione casuale del numero di archi presenti nel grafo del singolo caso in esame
+        m = randrange(0, n * (n - 1)) if barch == 0 else barch      # Generazione casuale del numero di archi presenti nel grafo del singolo caso in esame
         final_arclist = sample(arclist, m)          # La lista final_arclist viene popolata con m elementi casuali della lista arclist grazie alla funzione sample della libreria random di Python
         file.write(str(len(arclist)) + "\n")        # Scrittura sul file di input del numero di archi presenti nel grafo del caso in esame
         #arcstartav+=time()-arcsstart
