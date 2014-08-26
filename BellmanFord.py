@@ -70,7 +70,7 @@ def BellmanFord(G, list, casenumb):
                 qcity[elem.arr] = 0
     global bubba
     bubba=time()-algtime
-    print "esplorato e risolto in",bubba,"s"
+    print "Esplorato e Risolto in",bubba,"s"
     bel2+= time() - belford_sec
     #print "Seconda passata Bellman/Ford in: ", time() - belford_sec
 
@@ -79,6 +79,8 @@ def BellmanFord(G, list, casenumb):
     outlist=[casenumb]         # Inizializzazione lista "outlist": tale lista tiene in memoria i dai da stampare successivamente per ogni caso di test
     for elem in qcity:         # Ciclo che popola la lista "outlist" con le query del caso
         #print qcity[elem] if qcity[elem] >= 0 and qcity[elem] != float("+inf") else "?"
+        if qcity[elem] == float("+inf"):
+            qcity[elem] = "?"
         outlist.append(qcity[elem])
     tot+= time() - bellstart
     #print "Tempo totale : ", time() - bellstart

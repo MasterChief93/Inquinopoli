@@ -61,7 +61,6 @@ def maint(input_file,output_file):
     per la risoluzione del caso di test
     @param input_file: fileobject; tipo di dato file con indirizzo relativo alla posizione del file di input
     """
-    #TODO generatore2.Generatore()
     result = reading(input_file)
     total_outlist=[]
 
@@ -97,7 +96,6 @@ def reading(file):
     #    print data
     i = 1                # Assegnazione di variabile : ad "i" viene assegnato il valore 1. La variabile i servirà nel cilo while successivo per determinare quando si sarà letto tutto il file
     while i != len(data): # Ciclo che legge tutto il file, basandosi sul contatore i
-        print i,len(data)
         if data[i] == "\n":  # Se data[i] == "\n" allora alla riga successiva inizierà un nuovo caso
                                                                     # Assegnazione di variabili ed inizializzazione liste
             numbnode = data[i + 1].strip()                          # a "numbnode" viene assegnato data[i + 1], ovvero il numero di nodi presenti nel grafo
@@ -111,7 +109,7 @@ def reading(file):
                     i = j
                     break
             query = []
-            for j in range(i + 1, i + int(data[i]) + 1):   # Ciclo che inserisce nella lista "query" tutte le query lette dal file di input
+            for j in range(i + 1, i + int(data[i]) + 1):        # Ciclo che inserisce nella lista "query" tutte le query lette dal file di input
                 try:
                     query.append(int(data[j].strip()))
                 except:

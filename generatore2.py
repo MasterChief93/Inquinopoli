@@ -3,15 +3,14 @@ from random import randrange, seed, sample
 from time import time
 
 
-def Generatore(file,btest,bnode,barch):
+def Generatore(file,btest,bnode,barch,percentage):
     """
     Funzione atta a scrivere un file di input sotto le opportune condizioni richeste dal progetto stesso
     """
 
-    #TODO file = open("input2.txt", "w") # Apertura del file
     test = randrange(1, 50) if btest == 0 else btest    # Generazione casuale del numero di test da effettuare mediante la funzione randrange della libreria random di Python
+    print "Saranno generati e risolti " + str(test) + " casi di test"
     file.write(str(test) + "\n\n") # Scrittura sul file di input : la prima riga conterrà sempre il numero di test da effettuare, seguita da una riga vuota
-    #TODO file.close()
     polav=0
     totalarcav=0
     arcstartav=0
@@ -22,7 +21,7 @@ def Generatore(file,btest,bnode,barch):
     #    print "Sto eseguendo il gruppo di test numero ",abdula+1 abdulatrallallero
     for casetest in range(0, test):       # Ciclo che scrive sul file di input un caso random per ogni test
 
-        #TODO file = open("input2.txt","a+")
+
         seed(time() + casetest)           # Randomizzazione del seed per la libreria random
         n = randrange(2, 200) if bnode == 0 else bnode     # Generazione casuale del numero di nodi presenti nel grafo del singolo caso in esame
         file.write(str(n) + "\n")  # Scrittura del numero di nodi sul file di input e successivo cambo di riga
@@ -46,12 +45,14 @@ def Generatore(file,btest,bnode,barch):
 
         #arcsstart=time()
         m = randrange(0, n * (n - 1)) if barch == 0 else barch      # Generazione casuale del numero di archi presenti nel grafo del singolo caso in esame
-        final_arclist = sample(arclist, m)          # La lista final_arclist viene popolata con m elementi casuali della lista arclist grazie alla funzione sample della libreria random di Python
-        file.write(str(len(arclist)) + "\n")        # Scrittura sul file di input del numero di archi presenti nel grafo del caso in esame
+        density = m * (float(percentage)/100)
+        density = density + 1 if density == 0 else density
+        final_arclist = sample(arclist, int(density))          # La lista final_arclist viene popolata con m elementi casuali della lista arclist grazie alla funzione sample della libreria random di Python
+        file.write(str(len(final_arclist)) + "\n")        # Scrittura sul file di input del numero di archi presenti nel grafo del caso in esame
         #arcstartav+=time()-arcsstart
 
         #arcwritestart=time()
-        for arc in arclist:                         # Ciclo che scrive sul file di input tutti gli archi del grafo del caso in esame
+        for arc in final_arclist:                         # Ciclo che scrive sul file di input tutti gli archi del grafo del caso in esame
             file.write(str(arc[0]) + " " + str(arc[1]) + "\n")
         #arcwriteav+=time()-arcwritestart
 
@@ -83,15 +84,6 @@ def Generatore(file,btest,bnode,barch):
         #    qlist=[2]
         if not casetest == test - 1:
             file.write("\n")                            # Finite di scrivere le query sul file di input si passa alla riga successiva per scrivere, se presente, il caso successivo
-        #TODO file.close()
-    #TODO file.close()                                # Finito di scrivere il file di input questo verrà chiusto per poi essere riaperto dalla funzione main()
-    #print "Generazione casi completata"
-    print "Generato grafo con",n,"nodi e",m,"archi"
-    # print "Tempo medio per generare e scrivere gli inquinamenti: ",polav/float(10000)
-    # print "Tempo medio per popolare la lista totale degli archi: ",totalarcav/float(10000)
-    # print "Tempo medio per scegliere m archi: ",arcstartav/float(10000)
-    # print "Tempo medio per scrivere gli archi: ",arcwriteav/float(10000)
-    # print "Tempo medio per scegliere e scrivere le query: ",qav/float(10000)
 
 if __name__ == "__main__":                          # Controllo atto a verificare se lo script viene eseguito direttamente o tramite importazione
     start=time()
